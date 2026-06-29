@@ -381,6 +381,22 @@
 
   .product-body { padding: 1.5rem; }
 
+  .product-price {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 1.8rem;
+    color: var(--mustard);
+    margin-bottom: 0.5rem;
+  }
+
+  .product-price-note {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--grill-red);
+    margin-bottom: 0.5rem;
+  }
+
   .product-name {
     font-family: 'Black Han Sans', sans-serif;
     font-size: 1.4rem;
@@ -394,6 +410,28 @@
     line-height: 1.6;
     margin-bottom: 1.2rem;
   }
+
+  .product-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+    padding: 0.65rem 1.2rem;
+    background: #25D366;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .product-btn:hover { background: #1ebe5d; transform: translateY(-2px); }
 
   .product-tags {
     display: flex;
@@ -732,12 +770,14 @@
       </div>
       <div class="product-body">
         <div class="product-name">Pack Clásico</div>
+        <div class="product-price">$35.000</div>
         <p class="product-desc">El combo perfecto para tener el freezer listo. Incluye 10 carnes artesanales + 10 panes. Tú solo pones el fuego.</p>
         <div class="product-tags">
           <span class="tag">10 carnes</span>
           <span class="tag">10 panes</span>
           <span class="tag">Pack completo</span>
         </div>
+        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20pedir%20el%20Pack%20Cl%C3%A1sico%20(10%20carnes%20%2B%2010%20panes)%20%E2%80%94%20%2435.000" class="product-btn" target="_blank">💬 Pedir por WhatsApp</a>
       </div>
     </div>
 
@@ -748,12 +788,14 @@
       </div>
       <div class="product-body">
         <div class="product-name">Pack Doble</div>
+        <div class="product-price-note">Precio a cotizar</div>
         <p class="product-desc">Para cuando vienen todos. 20 carnes artesanales + 10 panes. Ideal para asados, cumpleaños y reuniones que no ponen buenas.</p>
         <div class="product-tags">
           <span class="tag">20 carnes</span>
           <span class="tag">10 panes</span>
           <span class="tag">Para eventos</span>
         </div>
+        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20cotizar%20el%20Pack%20Doble%20(20%20carnes%20%2B%2010%20panes)" class="product-btn" target="_blank">💬 Cotizar por WhatsApp</a>
       </div>
     </div>
 
@@ -764,12 +806,14 @@
       </div>
       <div class="product-body">
         <div class="product-name">Pack Solo Carnes</div>
+        <div class="product-price">$25.000</div>
         <p class="product-desc">¿Ya tienes el pan? Pide solo las carnes. Packs de 10 en 10, para armarlos como más te guste.</p>
         <div class="product-tags">
           <span class="tag">10 unidades</span>
           <span class="tag">Solo carne</span>
           <span class="tag">Flexible</span>
         </div>
+        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20pedir%20el%20Pack%20Solo%20Carnes%20(10%20unidades)%20%E2%80%94%20%2425.000" class="product-btn" target="_blank">💬 Pedir por WhatsApp</a>
       </div>
     </div>
 
@@ -779,13 +823,15 @@
         <span class="product-badge" style="background:#E8B400;color:#1A1208;">A tu pinta</span>
       </div>
       <div class="product-body">
-        <div class="product-name">Arma tu Pack</div>
-        <p class="product-desc">Tú decides la cantidad, la mezcla y cómo lo quieres. Escríbenos y armamos el pedido exacto que necesitas, sin límite.</p>
+        <div class="product-name">Eventos CG</div>
+        <div class="product-price-note">Bajo cotización</div>
+        <p class="product-desc">Organizamos el servicio completo de hamburguesas para tu evento: entrega a domicilio o presencia en eventos privados. Consulta disponibilidad y precios.</p>
         <div class="product-tags">
-          <span class="tag">Personalizado</span>
-          <span class="tag">Tú decides</span>
-          <span class="tag">Sin límite fijo</span>
+          <span class="tag">Eventos privados</span>
+          <span class="tag">A domicilio</span>
+          <span class="tag">Cotización</span>
         </div>
+        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20cotizar%20el%20servicio%20de%20Eventos%20CG" class="product-btn" target="_blank">💬 Cotizar por WhatsApp</a>
       </div>
     </div>
 
@@ -852,7 +898,7 @@
       <span class="ch-icon">📍</span>
       <h3 style="color:#1A1208;">Herradura Experience</h3>
       <p style="color:#1A1208;">Visítanos en nuestra sede. Un espacio pensado para vivir la experiencia CharlieGood en persona: prueba, compra y llévate tu pack.</p>
-      <div class="ch-detail" style="color:#1A1208;">→ Ver ubicación</div>
+      <div class="ch-detail" style="color:#1A1208;">📍 Cayetano Almeyda 1500, La Serena</div>
     </div>
   </div>
 </section>
@@ -863,10 +909,10 @@
   <h2>¿Listo pa'l <span>primer mordisco</span>?</h2>
   <p>Escríbenos para hacer tu pedido, consultar disponibilidad en eventos o preguntar lo que quieras. Respondemos al tiro.</p>
   <div class="contact-links">
-    <a href="https://wa.me/56900000000" class="contact-link whatsapp" target="_blank">
+    <a href="https://wa.me/56990332870" class="contact-link whatsapp" target="_blank">
       💬 WhatsApp
     </a>
-    <a href="https://instagram.com/charligood" class="contact-link instagram" target="_blank">
+    <a href="https://instagram.com/cg.burgers" class="contact-link instagram" target="_blank">
       📸 Instagram
     </a>
   </div>
