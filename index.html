@@ -390,9 +390,7 @@
   }
 
   .product-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    display: inline-block;
     background: var(--grill-red);
     color: var(--cream);
     font-size: 0.7rem;
@@ -401,6 +399,7 @@
     text-transform: uppercase;
     padding: 0.3rem 0.7rem;
     border-radius: 3px;
+    margin-bottom: 0.6rem;
   }
 
   .product-body { padding: 1.5rem; }
@@ -790,9 +789,9 @@
     <div class="product-card">
       <div class="product-img">
         <img src="images/pack-clasico.jpeg" alt="Pack Clásico CharlieGood">
-        <span class="product-badge" style="background:#E8B400;color:#1A1208;">El más pedido</span>
       </div>
       <div class="product-body">
+        <span class="product-badge" style="background:#E8B400;color:#1A1208;">El más pedido</span>
         <div class="product-name">Pack Clásico</div>
         <div class="product-price">$35.000</div>
         <p class="product-desc">El combo perfecto para tener el freezer listo. Incluye 10 carnes artesanales + 10 panes. Tú solo pones el fuego.</p>
@@ -808,9 +807,9 @@
     <div class="product-card" style="border-color:rgba(232,180,0,0.35);">
       <div class="product-img">
         <img src="images/pack-doble.jpeg" alt="Pack Doble CharlieGood">
-        <span class="product-badge" style="background:#C23B22;color:#fff;right:auto;left:1rem;">Para el grupo</span>
       </div>
       <div class="product-body">
+        <span class="product-badge" style="background:#C23B22;color:#fff;">Para el grupo</span>
         <div class="product-name">Pack Doble</div>
         <div class="product-price-note">Precio a cotizar</div>
         <p class="product-desc">Para cuando vienen todos. 20 carnes artesanales + 10 panes. Ideal para asados, cumpleaños y reuniones que no ponen buenas.</p>
@@ -826,9 +825,9 @@
     <div class="product-card">
       <div class="product-img">
         <img src="images/pack-solo-carnes.jpeg" alt="Pack Solo Carnes CharlieGood">
-        <span class="product-badge">Solo carne</span>
       </div>
       <div class="product-body">
+        <span class="product-badge">Solo carne</span>
         <div class="product-name">Pack Solo Carnes</div>
         <div class="product-price">$25.000</div>
         <p class="product-desc">¿Ya tienes el pan? Pide solo las carnes. Packs de 10 en 10, para armarlos como más te guste.</p>
@@ -844,9 +843,9 @@
     <div class="product-card" style="border:2px solid rgba(232,180,0,0.5);position:relative;">
       <div class="product-img">
         <img src="images/eventos-cg.jpeg" alt="Eventos CG CharlieGood">
-        <span class="product-badge" style="background:#E8B400;color:#1A1208;right:auto;left:1rem;">A tu pinta</span>
       </div>
       <div class="product-body">
+        <span class="product-badge" style="background:#E8B400;color:#1A1208;">A tu pinta</span>
         <div class="product-name">Eventos CG</div>
         <div class="product-price-note">Bajo cotización</div>
         <p class="product-desc">Organizamos el servicio completo de hamburguesas para tu evento: entrega a domicilio o presencia en eventos privados. Consulta disponibilidad y precios.</p>
