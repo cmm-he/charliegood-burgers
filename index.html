@@ -179,14 +179,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.9rem 2.5rem;
+    padding: 0.4rem 2.5rem;
     background: rgba(26,18,8,0.95);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(232,180,0,0.12);
   }
 
   .nav-logo-img img {
-    height: 48px;
+    height: 104px;
     width: auto;
     display: block;
     mix-blend-mode: screen;
@@ -804,7 +804,7 @@
   }
 
   .footer-logo img {
-    height: 40px;
+    height: 80px;
     width: auto;
     opacity: 1;
   }
@@ -847,6 +847,8 @@
   /* RESPONSIVE */
   @media (max-width: 768px) {
     nav ul { display: none; }
+    .nav-logo-img img { height: 72px; }
+    .footer-logo img { height: 72px; }
     .hero { padding: 7rem 1.5rem 3rem; }
     .stamp { display: none; }
     .about { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
@@ -865,7 +867,7 @@
 <!-- NAVEGACIÓN -->
 <nav aria-label="Navegación principal">
   <a href="#main-content" class="nav-logo-img" aria-label="CharlieGood Burgers — ir al inicio">
-    <img src="images/logo.png" alt="Logo CharlieGood Burgers" height="52">
+    <img src="images/logo.png" alt="Logo CharlieGood Burgers" height="104">
   </a>
   <ul role="list">
     <li><a href="#productos">Productos</a></li>
@@ -1125,7 +1127,7 @@
 
 <!-- FOOTER -->
 <footer role="contentinfo">
-  <div class="footer-logo"><img src="images/logo.png" alt="CharlieGood Burgers - hamburguesas artesanales congeladas" loading="lazy" height="40"></div>
+  <div class="footer-logo"><img src="images/logo.png" alt="CharlieGood Burgers - hamburguesas artesanales congeladas" loading="lazy" height="80"></div>
   <div class="footer-copy">© 2026 CharlieGood Burgers · Hamburguesas artesanales congeladas</div>
 </footer>
 
