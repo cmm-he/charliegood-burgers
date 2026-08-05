@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cmm-he.github.io/charliegood-burgers/sitemap.xml
+Sitemap: https://www.charliegood.cl/sitemap.xml

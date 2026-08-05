@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cmm-he.github.io/charliegood-burgers/</loc>
+    <loc>https://www.charliegood.cl/</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://cmm-he.github.io/charliegood-burgers/#productos</loc>
+    <loc>https://www.charliegood.cl/#productos</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cmm-he.github.io/charliegood-burgers/#canales</loc>
+    <loc>https://www.charliegood.cl/#canales</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://cmm-he.github.io/charliegood-burgers/#contacto</loc>
+    <loc>https://www.charliegood.cl/#contacto</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

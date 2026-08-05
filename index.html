@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- SECURITY HEADERS (meta fallback — HTTP headers via vercel.json toman precedencia) -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'unsafe-inline'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
 <!-- SEO PRIMARY -->
 <title>Hamburguesas Artesanales Congeladas La Serena y Coquimbo | CharlieGood Burgers</title>
 <meta name="description" content="Hamburguesas artesanales congeladas con sabor a parrilla en La Serena y Coquimbo. Packs de hamburguesas listas en 8 minutos, entrega a domicilio y servicio para eventos. 100% carne artesanal, sin conservantes.">
@@ -14,7 +19,7 @@
 <meta name="geo.placename" content="La Serena, Coquimbo">
 
 <!-- CANONICAL -->
-<link rel="canonical" href="https://cmm-he.github.io/charliegood-burgers/">
+<link rel="canonical" href="https://www.charliegood.cl/">
 
 <!-- OPEN GRAPH -->
 <meta property="og:type" content="website">
@@ -22,15 +27,15 @@
 <meta property="og:locale" content="es_CL">
 <meta property="og:title" content="Hamburguesas Artesanales Congeladas La Serena y Coquimbo | CharlieGood Burgers">
 <meta property="og:description" content="Packs de hamburguesas artesanales congeladas con sabor a parrilla. Entrega a domicilio en La Serena y Coquimbo, y servicio para eventos. Listas en 8 minutos.">
-<meta property="og:image" content="https://cmm-he.github.io/charliegood-burgers/images/pack-clasico.jpeg">
+<meta property="og:image" content="https://www.charliegood.cl/images/pack-clasico.jpeg">
 <meta property="og:image:alt" content="Pack Clásico de hamburguesas artesanales congeladas CharlieGood Burgers">
-<meta property="og:url" content="https://cmm-he.github.io/charliegood-burgers/">
+<meta property="og:url" content="https://www.charliegood.cl/">
 
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hamburguesas Artesanales Congeladas La Serena y Coquimbo | CharlieGood Burgers">
 <meta name="twitter:description" content="Packs de hamburguesas artesanales congeladas con sabor a parrilla. Entrega a domicilio en La Serena y Coquimbo, y servicio para eventos.">
-<meta name="twitter:image" content="https://cmm-he.github.io/charliegood-burgers/images/pack-clasico.jpeg">
+<meta name="twitter:image" content="https://www.charliegood.cl/images/pack-clasico.jpeg">
 
 <!-- FONTS (con preconnect para velocidad) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,12 +47,12 @@
 {
   "@context": "https://schema.org",
   "@type": "FoodEstablishment",
-  "@id": "https://cmm-he.github.io/charliegood-burgers/#business",
+  "@id": "https://www.charliegood.cl/#business",
   "name": "CharlieGood Burgers",
   "description": "Hamburguesas artesanales congeladas con sabor a parrilla de verdad. Packs listos para el freezer, entrega a domicilio y servicio para eventos en La Serena y Coquimbo, Chile.",
-  "url": "https://cmm-he.github.io/charliegood-burgers/",
-  "image": "https://cmm-he.github.io/charliegood-burgers/images/pack-clasico.jpeg",
-  "logo": "https://cmm-he.github.io/charliegood-burgers/images/logo.png",
+  "url": "https://www.charliegood.cl/",
+  "image": "https://www.charliegood.cl/images/pack-clasico.jpeg",
+  "logo": "https://www.charliegood.cl/images/logo.png",
   "servesCuisine": ["Hamburguesas artesanales", "Comida rápida", "Parrilla"],
   "priceRange": "$$",
   "telephone": "+56990332870",
@@ -122,11 +127,11 @@
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://cmm-he.github.io/charliegood-burgers/#localbusiness",
+  "@id": "https://www.charliegood.cl/#localbusiness",
   "name": "CharlieGood Burgers",
   "description": "Hamburguesas artesanales congeladas en La Serena y Coquimbo. Entrega a domicilio, retiro en sede con reserva y servicio para eventos.",
-  "url": "https://cmm-he.github.io/charliegood-burgers/",
-  "image": "https://cmm-he.github.io/charliegood-burgers/images/logo.png",
+  "url": "https://www.charliegood.cl/",
+  "image": "https://www.charliegood.cl/images/logo.png",
   "telephone": "+56990332870",
   "priceRange": "$$",
   "address": {
@@ -809,6 +814,36 @@
     opacity: 0.4;
   }
 
+  /* SKIP NAVIGATION */
+  .skip-nav {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .skip-nav:focus {
+    position: fixed;
+    top: 0; left: 0;
+    width: auto; height: auto;
+    background: var(--mustard);
+    color: var(--carbon);
+    padding: 0.75rem 1.5rem;
+    font-weight: 800;
+    font-size: 1rem;
+    z-index: 9999;
+    text-decoration: none;
+    border-radius: 0 0 6px 0;
+    outline: 3px solid var(--carbon);
+  }
+
+  /* FOCUS VISIBLE para teclado */
+  :focus-visible {
+    outline: 3px solid var(--mustard);
+    outline-offset: 3px;
+  }
+
   /* RESPONSIVE */
   @media (max-width: 768px) {
     nav ul { display: none; }
@@ -825,10 +860,14 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-nav">Saltar al contenido principal</a>
+
 <!-- NAVEGACIÓN -->
-<nav>
-  <a href="#" class="nav-logo-img"><img src="images/logo.png" alt="Logo CharlieGood Burgers - hamburguesas artesanales congeladas" height="52"></a>
-  <ul>
+<nav aria-label="Navegación principal">
+  <a href="#main-content" class="nav-logo-img" aria-label="CharlieGood Burgers — ir al inicio">
+    <img src="images/logo.png" alt="Logo CharlieGood Burgers" height="52">
+  </a>
+  <ul role="list">
     <li><a href="#productos">Productos</a></li>
     <li><a href="#como">Cómo funciona</a></li>
     <li><a href="#canales">Dónde encontrarnos</a></li>
@@ -836,15 +875,17 @@
   </ul>
 </nav>
 
+<main id="main-content">
+
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-bg-text">GOOD</div>
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-bg-text" aria-hidden="true">GOOD</div>
 
   <!-- Logo hero -->
   <div class="stamp"><img src="images/logo.png" alt="CharlieGood Burgers - hamburguesas artesanales congeladas La Serena" class="logo-stamp"></div>
 
   <div class="hero-eyebrow">Hamburguesas artesanales congeladas · La Serena y Coquimbo</div>
-  <h1>
+  <h1 id="hero-heading">
     El sabor<br>
     <span class="highlight">que no</span>
     <span class="red"> se olvida</span>
@@ -857,7 +898,7 @@
 </section>
 
 <!-- TICKER -->
-<div class="ticker-wrap">
+<div class="ticker-wrap" aria-hidden="true" role="presentation">
   <div class="ticker-inner">
     <span class="ticker-item">100% carne artesanal</span>
     <span class="ticker-item ticker-sep">·</span>
@@ -938,7 +979,7 @@
           <span class="tag">10 panes</span>
           <span class="tag">Pack completo</span>
         </div>
-        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20pedir%20el%20Pack%20Cl%C3%A1sico%20(10%20carnes%20%2B%2010%20panes)%20%E2%80%94%20%2435.000" class="product-btn" target="_blank">💬 Pedir por WhatsApp</a>
+        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20pedir%20el%20Pack%20Cl%C3%A1sico%20(10%20carnes%20%2B%2010%20panes)%20%E2%80%94%20%2435.000" class="product-btn" target="_blank" rel="noopener noreferrer">💬 Pedir por WhatsApp</a>
       </div>
     </div>
 
@@ -956,7 +997,7 @@
           <span class="tag">10 panes</span>
           <span class="tag">Para eventos</span>
         </div>
-        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20cotizar%20el%20Pack%20Doble%20(20%20carnes%20%2B%2010%20panes)" class="product-btn" target="_blank">💬 Cotizar por WhatsApp</a>
+        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20cotizar%20el%20Pack%20Doble%20(20%20carnes%20%2B%2010%20panes)" class="product-btn" target="_blank" rel="noopener noreferrer">💬 Cotizar por WhatsApp</a>
       </div>
     </div>
 
@@ -974,7 +1015,7 @@
           <span class="tag">Solo carne</span>
           <span class="tag">Flexible</span>
         </div>
-        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20pedir%20el%20Pack%20Solo%20Carnes%20(10%20unidades)%20%E2%80%94%20%2425.000" class="product-btn" target="_blank">💬 Pedir por WhatsApp</a>
+        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20pedir%20el%20Pack%20Solo%20Carnes%20(10%20unidades)%20%E2%80%94%20%2425.000" class="product-btn" target="_blank" rel="noopener noreferrer">💬 Pedir por WhatsApp</a>
       </div>
     </div>
 
@@ -992,7 +1033,7 @@
           <span class="tag">A domicilio</span>
           <span class="tag">Cotización</span>
         </div>
-        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20cotizar%20el%20servicio%20de%20Eventos%20CG" class="product-btn" target="_blank">💬 Cotizar por WhatsApp</a>
+        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20cotizar%20el%20servicio%20de%20Eventos%20CG" class="product-btn" target="_blank" rel="noopener noreferrer">💬 Cotizar por WhatsApp</a>
       </div>
     </div>
 
@@ -1060,7 +1101,7 @@
       <h3 style="color:#1A1208;">Retira en La Serena</h3>
       <p style="color:#1A1208;">Coordinamos el retiro en nuestra sede en Cayetano Almeyda 1500, La Serena. Escríbenos primero por WhatsApp o Instagram para agendar el día y hora.</p>
       <div class="ch-detail" style="color:#1A1208;">→ Reserva previa obligatoria</div>
-      <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20coordinar%20un%20retiro%20en%20Cayetano%20Almeyda%201500%2C%20La%20Serena" class="product-btn" style="background:#1A1208;color:#E8B400;margin-top:1.2rem;" target="_blank">💬 Reservar retiro</a>
+      <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20coordinar%20un%20retiro%20en%20Cayetano%20Almeyda%201500%2C%20La%20Serena" class="product-btn" style="background:#1A1208;color:#E8B400;margin-top:1.2rem;" target="_blank" rel="noopener noreferrer">💬 Reservar retiro</a>
     </div>
   </div>
 </section>
@@ -1071,17 +1112,19 @@
   <h2>¿Listo pa'l <span>primer mordisco</span>?</h2>
   <p>Escríbenos para hacer tu pedido, consultar disponibilidad en eventos o preguntar lo que quieras. Respondemos al tiro.</p>
   <div class="contact-links">
-    <a href="https://wa.me/56990332870" class="contact-link whatsapp" target="_blank">
-      💬 WhatsApp
+    <a href="https://wa.me/56990332870" class="contact-link whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contactar a CharlieGood Burgers por WhatsApp">
+      <span aria-hidden="true">💬</span> WhatsApp
     </a>
-    <a href="https://instagram.com/cg.burgers" class="contact-link instagram" target="_blank">
-      📸 Instagram
+    <a href="https://instagram.com/cg.burgers" class="contact-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Seguir a CharlieGood Burgers en Instagram (@cg.burgers)">
+      <span aria-hidden="true">📸</span> Instagram
     </a>
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
-<footer>
+<footer role="contentinfo">
   <div class="footer-logo"><img src="images/logo.png" alt="CharlieGood Burgers - hamburguesas artesanales congeladas" loading="lazy" height="40"></div>
   <div class="footer-copy">© 2026 CharlieGood Burgers · Hamburguesas artesanales congeladas</div>
 </footer>
