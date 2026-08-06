@@ -1006,7 +1006,7 @@
   .wa-popup-overlay {
     position: fixed;
     inset: 0;
-    z-index: 9998;
+    z-index: 9999;
     background: rgba(0,0,0,0.72);
     display: flex;
     align-items: center;
@@ -1411,10 +1411,10 @@
 <script>
 (function () {
   var STORAGE_KEY = 'cg_popup_seen';
-  var SHOW_DELAY  = 30000;
+  var SHOW_DELAY  = 25000;
   var COUNTDOWN   = 10;
 
-  if (localStorage.getItem(STORAGE_KEY)) return;
+  if (localStorage.getItem(STORAGE_KEY) === 'seen') return;
 
   var overlay  = document.getElementById('wa-popup-overlay');
   var closeBtn = document.getElementById('wa-popup-close');
@@ -1424,7 +1424,7 @@
 
   function closePopup() {
     overlay.classList.remove('is-visible');
-    localStorage.setItem(STORAGE_KEY, '1');
+    localStorage.setItem(STORAGE_KEY, 'seen');
     clearInterval(interval);
     document.body.style.overflow = '';
   }
@@ -1440,6 +1440,7 @@
   }
 
   function showPopup() {
+    console.log('popup activado');
     overlay.classList.add('is-visible');
     document.body.style.overflow = 'hidden';
     startCountdown();
