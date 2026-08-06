@@ -486,14 +486,6 @@
     margin: 0 auto;
   }
 
-  @media (max-width: 900px) {
-    .products-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (max-width: 540px) {
-    .products-grid { grid-template-columns: 1fr; }
-  }
-
   .product-card {
     background: var(--smoke);
     border-radius: 12px;
@@ -673,9 +665,9 @@
 
   .channels-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 3rem auto 0;
   }
 
@@ -844,19 +836,175 @@
     outline-offset: 3px;
   }
 
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    nav ul { display: none; }
-    .nav-logo-img img { height: 72px; }
-    .footer-logo img { height: 72px; }
-    .hero { padding: 7rem 1.5rem 3rem; }
+  /* MENÚ HAMBURGUESA — base (oculto en desktop) */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem;
+    z-index: 101;
+  }
+  .burger-line {
+    width: 26px;
+    height: 2px;
+    background: var(--cream);
+    display: block;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+  .nav-toggle[aria-expanded="true"] .burger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav-toggle[aria-expanded="true"] .burger-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .nav-toggle[aria-expanded="true"] .burger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* ══════════════════════════════════════════
+     TABLET: 768px – 1279px
+  ══════════════════════════════════════════ */
+  @media (min-width: 768px) and (max-width: 1279px) {
+
+    /* NAV — visible, compacto */
+    nav { padding: 0.25rem 2rem; }
+    nav ul { gap: 1.25rem; }
+    nav ul a { font-size: 0.78rem; letter-spacing: 0.05em; }
+    .nav-logo-img img { height: 80px; }
+
+    /* HERO — centrado, logo fluye debajo */
+    .hero {
+      padding: 8rem 2rem 4rem;
+      align-items: center;
+      text-align: center;
+    }
+    .hero-eyebrow { justify-content: center; }
+    .hero h1 { max-width: 100%; font-size: clamp(3rem, 7vw, 5.5rem); }
+    .hero-sub { text-align: center; max-width: 580px; }
+    .hero-actions { justify-content: center; }
+    /* Stamp: de absolutamente posicionado a flujo, debajo del texto */
+    .stamp {
+      position: static;
+      transform: none;
+      width: 180px;
+      height: 180px;
+      order: 5;
+      align-self: center;
+      margin-top: 2rem;
+      opacity: 0.85;
+    }
+
+    /* ABOUT */
+    .about { padding: 5rem 2rem; gap: 2.5rem; }
+
+    /* PRODUCTS — 2 columnas */
+    .products { padding: 5rem 2rem; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .product-btn { width: auto; }
+
+    /* HOW — 2 columnas */
+    .how { padding: 5rem 2rem; max-width: 860px; }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+
+    /* CHANNELS — 2 columnas, 3ra centrada abajo */
+    .channels { padding: 5rem 2rem; }
+    .channels-grid { grid-template-columns: 1fr 1fr; max-width: 860px; }
+    .channels-grid > :last-child {
+      grid-column: 1 / -1;
+      max-width: 420px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* CONTACT */
+    .contact { padding: 5rem 2rem; }
+
+    /* FOOTER */
+    footer { padding: 2rem; }
+    .footer-logo img { height: 80px; }
+  }
+
+  /* ══════════════════════════════════════════
+     MÓVIL: hasta 767px
+  ══════════════════════════════════════════ */
+  @media (max-width: 767px) {
+
+    /* NAV — hamburguesa */
+    nav { padding: 0 1.25rem; }
+    .nav-logo-img img { height: 64px; }
+    .nav-toggle { display: flex; }
+
+    #nav-menu {
+      display: none;
+      list-style: none;
+    }
+    #nav-menu.is-open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      inset: 0;
+      background: rgba(26,18,8,0.97);
+      backdrop-filter: blur(16px);
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      z-index: 99;
+    }
+    #nav-menu.is-open li a {
+      font-size: 1.35rem;
+      opacity: 1;
+      letter-spacing: 0.08em;
+    }
+    #nav-menu.is-open .nav-cta {
+      padding: 0.65rem 2rem;
+      font-size: 1.1rem;
+    }
+
+    /* HERO — centrado en columna */
+    .hero {
+      padding: 7rem 1.25rem 3rem;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+    .hero-eyebrow { justify-content: center; font-size: 0.72rem; }
+    .hero h1 { max-width: 100%; }
+    .hero-sub { text-align: center; max-width: 100%; font-size: 1rem; }
+    .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
+    .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
     .stamp { display: none; }
-    .about { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
+
+    /* ABOUT */
+    .about { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 1.25rem; }
+
+    /* PRODUCTS */
+    .products { padding: 4rem 1.25rem; }
+    .products-grid { grid-template-columns: 1fr; }
+    .product-btn { width: 100%; }
+
+    /* HOW */
+    .how { padding: 4rem 1.25rem; }
+    .steps { grid-template-columns: 1fr; gap: 1.5rem; }
+
+    /* CHANNELS */
+    .channels { padding: 4rem 1.25rem; }
     .channels-grid { grid-template-columns: 1fr; }
-  .channels .channel-card:last-child { grid-column: 1; }
-    .products { padding: 4rem 1.5rem; }
-    .contact { padding: 4rem 1.5rem; }
-    footer { flex-direction: column; text-align: center; }
+
+    /* CONTACT */
+    .contact { padding: 4rem 1.25rem; }
+    .contact-links { flex-direction: column; align-items: stretch; }
+    .contact-link { width: 100%; justify-content: center; }
+
+    /* FOOTER */
+    .footer-logo img { height: 64px; }
+    footer { flex-direction: column; text-align: center; padding: 2rem 1.25rem; }
   }
 </style>
 </head>
@@ -869,12 +1017,17 @@
   <a href="#main-content" class="nav-logo-img" aria-label="CharlieGood Burgers — ir al inicio">
     <img src="images/logo.png" alt="Logo CharlieGood Burgers" height="104">
   </a>
-  <ul role="list">
+  <ul id="nav-menu" role="list">
     <li><a href="#productos">Productos</a></li>
     <li><a href="#como">Cómo funciona</a></li>
     <li><a href="#canales">Dónde encontrarnos</a></li>
     <li><a href="#contacto" class="nav-cta">Pedir ya</a></li>
   </ul>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+  </button>
 </nav>
 
 <main id="main-content">
@@ -1082,7 +1235,7 @@
     <div class="section-label">Dónde encontrarnos</div>
     <h2 class="section-title">Tres formas de encontrarnos</h2>
   </div>
-  <div class="channels-grid" style="grid-template-columns:1fr 1fr 1fr;">
+  <div class="channels-grid">
     <div class="channel-card eventos">
       <div class="ch-label">Eventos</div>
       <span class="ch-icon">🎪</span>
@@ -1131,5 +1284,40 @@
   <div class="footer-copy">© 2026 CharlieGood Burgers · Hamburguesas artesanales congeladas</div>
 </footer>
 
+<script>
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var menu   = document.getElementById('nav-menu');
+  if (!toggle || !menu) return;
+
+  function openMenu() {
+    menu.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Cerrar menú');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    menu.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menú');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function () {
+    menu.classList.contains('is-open') ? closeMenu() : openMenu();
+  });
+
+  /* Cerrar al hacer click en un link del menú */
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  /* Cerrar con tecla Escape */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
+  });
+}());
+</script>
 </body>
 </html>
