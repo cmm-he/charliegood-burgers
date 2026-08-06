@@ -999,6 +999,114 @@
     .footer-logo img { height: 64px; }
     footer { flex-direction: column; text-align: center; padding: 2rem 1.25rem; }
   }
+
+  /* ══════════════════════════════════════════
+     POPUP WHATSAPP
+  ══════════════════════════════════════════ */
+  .wa-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    background: rgba(0,0,0,0.72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .wa-popup-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .wa-popup-card {
+    position: relative;
+    background: var(--carbon);
+    border: 1px solid rgba(232,180,0,0.3);
+    border-radius: 16px;
+    padding: 2.5rem 2rem 2rem;
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.7);
+    transform: scale(0.85);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .wa-popup-overlay.is-visible .wa-popup-card {
+    transform: scale(1);
+  }
+  .wa-popup-close {
+    position: absolute;
+    top: 0.9rem;
+    right: 0.9rem;
+    background: none;
+    border: none;
+    color: var(--cream);
+    opacity: 0.45;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.3rem 0.55rem;
+    line-height: 1;
+    border-radius: 4px;
+    transition: opacity 0.2s, background 0.2s;
+  }
+  .wa-popup-close:hover { opacity: 1; background: rgba(255,255,255,0.08); }
+  .wa-popup-logo {
+    height: 80px;
+    width: auto;
+    display: block;
+    margin: 0 auto 1.25rem;
+    mix-blend-mode: screen;
+    filter: brightness(1.15);
+  }
+  .wa-popup-title {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 1.85rem;
+    line-height: 1.1;
+    color: var(--cream);
+    margin-bottom: 0.6rem;
+  }
+  .wa-popup-sub {
+    font-size: 0.95rem;
+    color: var(--cream);
+    opacity: 0.65;
+    line-height: 1.55;
+    margin-bottom: 1.75rem;
+  }
+  .wa-popup-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    background: #25D366;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    margin-bottom: 1.25rem;
+  }
+  .wa-popup-btn:hover { background: #1ebe5d; transform: translateY(-2px); }
+  .wa-popup-countdown {
+    font-size: 0.78rem;
+    color: var(--cream);
+    opacity: 0.35;
+    margin: 0;
+  }
+  .wa-popup-countdown span { font-weight: 800; }
+
+  @media (max-width: 767px) {
+    .wa-popup-card { padding: 2rem 1.5rem 1.5rem; }
+    .wa-popup-title { font-size: 1.5rem; }
+    .wa-popup-logo { height: 64px; }
+  }
 </style>
 </head>
 <body>
@@ -1281,6 +1389,74 @@
     <div>CharlieGood Burgers · La Serena, Coquimbo, Chile</div>
   </div>
 </footer>
+
+<!-- POPUP WHATSAPP -->
+<div id="wa-popup-overlay" class="wa-popup-overlay" role="dialog" aria-modal="true" aria-labelledby="wa-popup-title">
+  <div class="wa-popup-card" id="wa-popup-card">
+    <button class="wa-popup-close" id="wa-popup-close" aria-label="Cerrar popup">✕</button>
+    <img src="images/logo.png" alt="CharlieGood Burgers" class="wa-popup-logo">
+    <h2 class="wa-popup-title" id="wa-popup-title">¿Se te antojó una burger? 🍔</h2>
+    <p class="wa-popup-sub">Escríbenos y te armamos tu pack al tiro</p>
+    <a href="https://wa.me/56990332870?text=Hola!%20Me%20interes%C3%B3%20un%20pack%20de%20hamburguesas%20CharlieGood%20%F0%9F%94%A5"
+       class="wa-popup-btn"
+       id="wa-popup-cta"
+       target="_blank"
+       rel="noopener noreferrer">
+      💬 Escribir por WhatsApp
+    </a>
+    <p class="wa-popup-countdown">Cerrando en <span id="wa-popup-timer">10</span> segundos...</p>
+  </div>
+</div>
+
+<script>
+(function () {
+  var STORAGE_KEY = 'cg_popup_seen';
+  var SHOW_DELAY  = 5000;
+  var COUNTDOWN   = 10;
+
+  if (localStorage.getItem(STORAGE_KEY)) return;
+
+  var overlay  = document.getElementById('wa-popup-overlay');
+  var closeBtn = document.getElementById('wa-popup-close');
+  var timerEl  = document.getElementById('wa-popup-timer');
+  var ctaBtn   = document.getElementById('wa-popup-cta');
+  var interval;
+
+  function closePopup() {
+    overlay.classList.remove('is-visible');
+    localStorage.setItem(STORAGE_KEY, '1');
+    clearInterval(interval);
+    document.body.style.overflow = '';
+  }
+
+  function startCountdown() {
+    var secs = COUNTDOWN;
+    timerEl.textContent = secs;
+    interval = setInterval(function () {
+      secs -= 1;
+      timerEl.textContent = secs;
+      if (secs <= 0) { clearInterval(interval); closePopup(); }
+    }, 1000);
+  }
+
+  function showPopup() {
+    overlay.classList.add('is-visible');
+    document.body.style.overflow = 'hidden';
+    startCountdown();
+  }
+
+  closeBtn.addEventListener('click', closePopup);
+  ctaBtn.addEventListener('click', closePopup);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closePopup();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('is-visible')) closePopup();
+  });
+
+  setTimeout(showPopup, SHOW_DELAY);
+}());
+</script>
 
 <script>
 (function () {
