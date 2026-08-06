@@ -10,32 +10,35 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
 <!-- SEO PRIMARY -->
-<title>Hamburguesas Artesanales Congeladas La Serena y Coquimbo | CharlieGood Burgers</title>
-<meta name="description" content="Hamburguesas artesanales congeladas con sabor a parrilla en La Serena y Coquimbo. Packs de hamburguesas listas en 10 minutos, entrega a domicilio y servicio para eventos. 100% carne artesanal, sin conservantes.">
-<meta name="keywords" content="hamburguesas artesanales congeladas La Serena, pack hamburguesas Chile, hamburguesas congeladas Coquimbo, hamburguesas a domicilio La Serena, hamburguesas para eventos, CharlieGood Burgers, carne artesanal congelada">
+<title>CharlieGood Burgers | Hamburguesas Artesanales Congeladas en La Serena y Coquimbo</title>
+<meta name="description" content="Hamburguesas artesanales congeladas en La Serena y Coquimbo. Pack Clásico, Pack Doble y más. Listas en 10 minutos. Entrega a domicilio y eventos. ¡Pide ahora por WhatsApp!">
+<meta name="keywords" content="hamburguesas artesanales La Serena, hamburguesas congeladas Coquimbo, pack hamburguesas La Serena, hamburguesas a domicilio La Serena, hamburguesas artesanales Coquimbo, CharlieGood Burgers">
 <meta name="author" content="CharlieGood Burgers">
 <meta name="robots" content="index, follow">
 <meta name="geo.region" content="CL-CO">
 <meta name="geo.placename" content="La Serena, Coquimbo">
 
 <!-- CANONICAL -->
-<link rel="canonical" href="https://www.charliegood.cl/">
+<link rel="canonical" href="https://www.charliegood.cl">
 
 <!-- OPEN GRAPH -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CharlieGood Burgers">
 <meta property="og:locale" content="es_CL">
-<meta property="og:title" content="Hamburguesas Artesanales Congeladas La Serena y Coquimbo | CharlieGood Burgers">
-<meta property="og:description" content="Packs de hamburguesas artesanales congeladas con sabor a parrilla. Entrega a domicilio en La Serena y Coquimbo, y servicio para eventos. Listas en 10 minutos.">
+<meta property="og:title" content="CharlieGood Burgers | Hamburguesas Artesanales Congeladas en La Serena y Coquimbo">
+<meta property="og:description" content="Hamburguesas artesanales congeladas en La Serena y Coquimbo. Pack Clásico, Pack Doble y más. Listas en 10 minutos. Entrega a domicilio y eventos.">
 <meta property="og:image" content="https://www.charliegood.cl/images/pack-clasico.jpeg">
 <meta property="og:image:alt" content="Pack Clásico de hamburguesas artesanales congeladas CharlieGood Burgers">
-<meta property="og:url" content="https://www.charliegood.cl/">
+<meta property="og:url" content="https://www.charliegood.cl">
 
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hamburguesas Artesanales Congeladas La Serena y Coquimbo | CharlieGood Burgers">
-<meta name="twitter:description" content="Packs de hamburguesas artesanales congeladas con sabor a parrilla. Entrega a domicilio en La Serena y Coquimbo, y servicio para eventos.">
+<meta name="twitter:title" content="CharlieGood Burgers | Hamburguesas Artesanales Congeladas en La Serena y Coquimbo">
+<meta name="twitter:description" content="Hamburguesas artesanales congeladas en La Serena y Coquimbo. Pack Clásico, Pack Doble y más. Listas en 10 minutos. ¡Pide por WhatsApp!">
 <meta name="twitter:image" content="https://www.charliegood.cl/images/pack-clasico.jpeg">
+
+<!-- PERFORMANCE: preload recursos críticos above-the-fold -->
+<link rel="preload" href="images/logo.png" as="image">
 
 <!-- FONTS (con preconnect para velocidad) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,11 +52,11 @@
   "@type": "FoodEstablishment",
   "@id": "https://www.charliegood.cl/#business",
   "name": "CharlieGood Burgers",
-  "description": "Hamburguesas artesanales congeladas con sabor a parrilla de verdad. Packs listos para el freezer, entrega a domicilio y servicio para eventos en La Serena y Coquimbo, Chile.",
-  "url": "https://www.charliegood.cl/",
+  "description": "Hamburguesas artesanales congeladas en La Serena y Coquimbo. Blend de carnes seleccionadas, sin conservantes, listas en 10 minutos.",
+  "url": "https://www.charliegood.cl",
   "image": "https://www.charliegood.cl/images/pack-clasico.jpeg",
   "logo": "https://www.charliegood.cl/images/logo.png",
-  "servesCuisine": ["Hamburguesas artesanales", "Comida rápida", "Parrilla"],
+  "servesCuisine": "Hamburguesas artesanales",
   "priceRange": "$$",
   "telephone": "+56990332870",
   "address": {
@@ -63,63 +66,40 @@
     "addressRegion": "Coquimbo",
     "addressCountry": "CL"
   },
-  "areaServed": [
-    { "@type": "City", "name": "La Serena" },
-    { "@type": "City", "name": "Coquimbo" }
-  ],
+  "areaServed": ["La Serena", "Coquimbo", "Región de Coquimbo"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "ventas",
+    "availableLanguage": "Spanish"
+  },
   "sameAs": [
     "https://instagram.com/cg.burgers"
   ],
-  "hasMenu": {
-    "@type": "Menu",
-    "hasMenuSection": {
-      "@type": "MenuSection",
-      "name": "Packs de hamburguesas artesanales congeladas",
-      "hasMenuItem": [
-        {
-          "@type": "MenuItem",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Packs CharlieGood",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
           "name": "Pack Clásico",
-          "description": "10 carnes artesanales + 10 panes. El combo perfecto para tener el freezer listo.",
-          "offers": {
-            "@type": "Offer",
-            "price": "35000",
-            "priceCurrency": "CLP",
-            "availability": "https://schema.org/InStock"
-          }
+          "description": "10 carnes artesanales + 10 panes"
         },
-        {
-          "@type": "MenuItem",
+        "price": "35000",
+        "priceCurrency": "CLP"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
           "name": "Pack Solo Carnes",
-          "description": "10 carnes artesanales congeladas, para armarlas como más te guste.",
-          "offers": {
-            "@type": "Offer",
-            "price": "25000",
-            "priceCurrency": "CLP",
-            "availability": "https://schema.org/InStock"
-          }
+          "description": "10 carnes artesanales sin pan"
         },
-        {
-          "@type": "MenuItem",
-          "name": "Pack Doble",
-          "description": "20 carnes artesanales + 10 panes. Ideal para asados, cumpleaños y reuniones.",
-          "offers": {
-            "@type": "Offer",
-            "priceCurrency": "CLP",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Eventos CG",
-          "description": "Servicio completo de hamburguesas para eventos privados, entrega a domicilio o presencia en el lugar. Bajo cotización.",
-          "offers": {
-            "@type": "Offer",
-            "priceCurrency": "CLP",
-            "availability": "https://schema.org/InStock"
-          }
-        }
-      ]
-    }
+        "price": "25000",
+        "priceCurrency": "CLP"
+      }
+    ]
   }
 }
 </script>
@@ -806,6 +786,19 @@
     opacity: 0.4;
   }
 
+  /* SR-ONLY: visible para buscadores y lectores de pantalla, oculto visualmente */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   /* SKIP NAVIGATION */
   .skip-nav {
     position: absolute;
@@ -1041,6 +1034,7 @@
 
   <div class="hero-eyebrow">Hamburguesas artesanales congeladas · La Serena y Coquimbo</div>
   <h1 id="hero-heading">
+    <span class="sr-only">Hamburguesas artesanales congeladas en La Serena y Coquimbo — </span>
     El sabor<br>
     <span class="highlight">que no</span>
     <span class="red"> se olvida</span>
@@ -1087,9 +1081,10 @@
 <section class="about">
   <div>
     <div class="about-label">Quiénes somos</div>
-    <h2>Nacimos de la parrilla, llegamos a tu casa</h2>
+    <h2>Nacimos de la parrilla, llegamos a tu puerta en La Serena y Coquimbo</h2>
     <p>CharlieGood nació de la pasión por la hamburguesa bien hecha. Desarrollamos una receta artesanal y la perfeccionamos hasta lograr algo que parecía imposible: una hamburguesa congelada que sabe igual que recién salida de la parrilla.</p>
     <p>Sin rellenos, sin trampas. Un blend de carnes seleccionadas y preparadas de manera artesanal, garantizando calidad en cada mordisco.</p>
+    <p>Entregamos en La Serena y Coquimbo. También en eventos y en nuestra sede en Herradura Experience.</p>
   </div>
   <div class="stat-grid">
     <div class="stat-card">
@@ -1233,7 +1228,7 @@
 <section class="channels" id="canales">
   <div class="section-header">
     <div class="section-label">Dónde encontrarnos</div>
-    <h2 class="section-title">Tres formas de encontrarnos</h2>
+    <h2 class="section-title">Hamburguesas a domicilio, en eventos y retiro en La Serena</h2>
   </div>
   <div class="channels-grid">
     <div class="channel-card eventos">
@@ -1281,7 +1276,10 @@
 <!-- FOOTER -->
 <footer role="contentinfo">
   <div class="footer-logo"><img src="images/logo.png" alt="CharlieGood Burgers - hamburguesas artesanales congeladas" loading="lazy" height="80"></div>
-  <div class="footer-copy">© 2026 CharlieGood Burgers · Hamburguesas artesanales congeladas</div>
+  <div class="footer-copy">
+    <div>© 2026 CharlieGood Burgers · Hamburguesas artesanales congeladas</div>
+    <div>CharlieGood Burgers · La Serena, Coquimbo, Chile</div>
+  </div>
 </footer>
 
 <script>
