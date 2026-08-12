@@ -600,6 +600,126 @@
     opacity: 0.7;
   }
 
+  /* TESTIMONIOS */
+  .testimonios {
+    background: var(--charcoal);
+    padding: 6rem 2.5rem;
+  }
+
+  .rating-global {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 1.5rem;
+    color: var(--cream);
+  }
+
+  .rating-global .stars-big {
+    color: var(--mustard);
+    letter-spacing: 0.05em;
+  }
+
+  .rating-global .rating-score {
+    color: var(--mustard);
+  }
+
+  .rating-global .rating-platform {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0.5;
+    align-self: flex-end;
+    padding-bottom: 0.15rem;
+  }
+
+  .testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 3rem auto 0;
+  }
+
+  .testimonio-card {
+    background: var(--smoke);
+    border: 1px solid rgba(232,180,0,0.15);
+    border-radius: 12px;
+    padding: 1.75rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+
+  .testimonio-card:hover {
+    border-color: rgba(232,180,0,0.4);
+    transform: translateY(-4px);
+  }
+
+  .testimonio-stars {
+    color: var(--mustard);
+    font-size: 1.05rem;
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
+
+  .testimonio-texto {
+    font-size: 0.95rem;
+    color: var(--cream);
+    opacity: 0.85;
+    line-height: 1.65;
+    flex: 1;
+  }
+
+  .testimonio-autor {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--cream);
+  }
+
+  .testimonio-fuente {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.35;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .testimonios-cta {
+    text-align: center;
+    margin-top: 2.75rem;
+  }
+
+  .btn-google {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid rgba(245,237,216,0.25);
+    color: var(--cream);
+    padding: 0.8rem 1.75rem;
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s, transform 0.15s;
+  }
+
+  .btn-google:hover {
+    border-color: var(--mustard);
+    color: var(--mustard);
+    transform: translateY(-2px);
+  }
+
   /* CÓMO FUNCIONA */
   .how {
     padding: 6rem 2.5rem;
@@ -909,6 +1029,10 @@
     .products-grid { grid-template-columns: repeat(2, 1fr); }
     .product-btn { width: auto; }
 
+    /* TESTIMONIOS */
+    .testimonios { padding: 5rem 2rem; }
+    .testimonios-grid { grid-template-columns: repeat(2, 1fr); }
+
     /* HOW — 2 columnas */
     .how { padding: 5rem 2rem; max-width: 860px; }
     .steps { grid-template-columns: repeat(2, 1fr); }
@@ -989,6 +1113,10 @@
     .products { padding: 4rem 1.25rem; }
     .products-grid { grid-template-columns: 1fr; }
     .product-btn { width: 100%; }
+
+    /* TESTIMONIOS */
+    .testimonios { padding: 4rem 1.25rem; }
+    .testimonios-grid { grid-template-columns: 1fr; }
 
     /* HOW */
     .how { padding: 4rem 1.25rem; }
@@ -1303,6 +1431,54 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonios" aria-labelledby="testimonios-heading">
+  <div class="section-header">
+    <div class="section-label">Reseñas Google</div>
+    <h2 class="section-title" id="testimonios-heading">Lo que dicen nuestros clientes</h2>
+    <div class="rating-global" aria-label="Calificación 5.0 de 5 en Google">
+      <span class="stars-big" aria-hidden="true">★★★★★</span>
+      <span class="rating-score">5.0</span>
+      <span class="rating-platform">en Google</span>
+    </div>
+  </div>
+
+  <div class="testimonios-grid">
+
+    <article class="testimonio-card">
+      <div class="testimonio-stars" aria-label="5 estrellas">★★★★★</div>
+      <p class="testimonio-texto">"Tremendas burgas, sabor real a carne y salsa buenísima"</p>
+      <div class="testimonio-autor">Nicolas Valdivia</div>
+      <div class="testimonio-fuente"><span aria-hidden="true">📍</span> Google Maps</div>
+    </article>
+
+    <article class="testimonio-card">
+      <div class="testimonio-stars" aria-label="5 estrellas">★★★★★</div>
+      <p class="testimonio-texto">"Excelentes productos, todo muy rico. 100% recomendado"</p>
+      <div class="testimonio-autor">Gianny Orozco S</div>
+      <div class="testimonio-fuente"><span aria-hidden="true">📍</span> Google Maps</div>
+    </article>
+
+    <article class="testimonio-card">
+      <div class="testimonio-stars" aria-label="5 estrellas">★★★★★</div>
+      <p class="testimonio-texto">"Consumo en el lugar — Almuerzo. 5 estrellas"</p>
+      <div class="testimonio-autor">Alfonso Jaime Becerra Aillon</div>
+      <div class="testimonio-fuente"><span aria-hidden="true">📍</span> Google Maps</div>
+    </article>
+
+  </div>
+
+  <div class="testimonios-cta">
+    <a href="https://www.google.com/maps/place/CharlieGood/@-29.9146419,-71.2645292,17z"
+       class="btn-google"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Ver todas las reseñas de CharlieGood Burgers en Google Maps">
+      Ver todas las reseñas en Google →
+    </a>
   </div>
 </section>
 
