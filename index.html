@@ -46,7 +46,7 @@
 <meta name="twitter:image" content="https://www.charliegood.cl/og-image.png">
 
 <!-- PERFORMANCE: preload recursos críticos above-the-fold -->
-<link rel="preload" href="images/logo.png" as="image">
+<link rel="preload" href="images/logo.webp" as="image" type="image/webp">
 
 <!-- FONTS (con preconnect para velocidad) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -150,7 +150,7 @@
     --smoke: #3D3020;
   }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 120px; }
 
   body {
     font-family: 'Nunito', sans-serif;
@@ -443,26 +443,30 @@
   /* PRODUCTOS */
   .products {
     background: var(--charcoal);
-    padding: 3.5rem 2.5rem;
+    padding: 1.5rem 2.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .section-header {
     text-align: center;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .section-label {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 800;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--mustard);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.4rem;
   }
 
   .section-title {
     font-family: 'Black Han Sans', sans-serif;
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(1.6rem, 3.2vw, 2.4rem);
     line-height: 1;
   }
 
@@ -470,8 +474,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
+    width: 100%;
   }
 
   .product-card {
@@ -480,6 +485,8 @@
     overflow: hidden;
     border: 1px solid rgba(232,180,0,0.1);
     transition: transform 0.25s, border-color 0.25s;
+    display: flex;
+    flex-direction: column;
   }
 
   .product-card:hover {
@@ -489,7 +496,7 @@
 
   .product-img {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/3;
     background: #000;
     overflow: hidden;
   }
@@ -498,7 +505,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 45%;
+    object-position: center 40%;
     display: block;
   }
 
@@ -506,58 +513,67 @@
     display: inline-block;
     background: var(--grill-red);
     color: var(--cream);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 0.4rem;
+  }
+
+  .product-body {
+    padding: 0.75rem 0.85rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .product-price {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 1.3rem;
+    color: var(--mustard);
+    margin-bottom: 0.25rem;
+  }
+
+  .product-price-note {
     font-size: 0.7rem;
     font-weight: 800;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    padding: 0.3rem 0.7rem;
-    border-radius: 3px;
-    margin-bottom: 0.6rem;
-  }
-
-  .product-body { padding: 1rem; }
-
-  .product-price {
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: 1.8rem;
-    color: var(--mustard);
-    margin-bottom: 0.5rem;
-  }
-
-  .product-price-note {
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--grill-red);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
   }
 
   .product-name {
     font-family: 'Black Han Sans', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: var(--mustard);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
   }
 
   .product-desc {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     opacity: 0.75;
-    line-height: 1.6;
-    margin-bottom: 1.2rem;
+    line-height: 1.45;
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .product-btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 1.2rem;
-    padding: 0.65rem 1.2rem;
+    margin-top: auto;
+    padding: 0.5rem 1rem;
     background: #25D366;
     color: #fff;
     font-family: 'Nunito', sans-serif;
     font-weight: 800;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     border-radius: 6px;
@@ -572,15 +588,16 @@
   .product-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 0.35rem;
+    margin-bottom: 0.75rem;
   }
 
   .tag {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 800;
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    padding: 0.25rem 0.6rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 3px;
     border: 1px solid rgba(245,237,216,0.2);
     color: var(--cream);
@@ -986,6 +1003,7 @@
     nav ul { gap: 1.25rem; }
     nav ul a { font-size: 0.78rem; letter-spacing: 0.05em; }
     .nav-logo-img img { height: 80px; }
+    html { scroll-padding-top: 95px; }
 
     /* HERO — centrado, logo fluye debajo */
     .hero {
@@ -1013,7 +1031,7 @@
     .about { padding: 5rem 2rem; gap: 2.5rem; }
 
     /* PRODUCTS — 2 columnas */
-    .products { padding: 5rem 2rem; }
+    .products { padding: 3rem 2rem; min-height: 0; }
     .products-grid { grid-template-columns: repeat(2, 1fr); }
     .product-btn { width: auto; }
 
@@ -1053,6 +1071,7 @@
     nav { padding: 0 1.25rem; }
     .nav-logo-img img { height: 64px; }
     .nav-toggle { display: flex; }
+    html { scroll-padding-top: 72px; }
 
     #nav-menu {
       display: none;
@@ -1098,7 +1117,7 @@
     .about { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 1.25rem; }
 
     /* PRODUCTS */
-    .products { padding: 4rem 1.25rem; }
+    .products { padding: 2.5rem 1.25rem; min-height: 0; }
     .products-grid { grid-template-columns: 1fr; }
     .product-btn { width: 100%; }
 
@@ -1238,7 +1257,10 @@
 <!-- NAVEGACIÓN -->
 <nav aria-label="Navegación principal">
   <a href="#main-content" class="nav-logo-img" aria-label="CharlieGood Burgers — ir al inicio">
-    <img src="images/logo.png" alt="Logo CharlieGood Burgers" height="104">
+    <picture>
+      <source srcset="images/logo.webp" type="image/webp">
+      <img src="images/logo.png" alt="Logo CharlieGood Burgers" height="104">
+    </picture>
   </a>
   <ul id="nav-menu" role="list">
     <li><a href="#productos">Productos</a></li>
@@ -1260,7 +1282,7 @@
   <div class="hero-bg-text" aria-hidden="true">GOOD</div>
 
   <!-- Logo hero -->
-  <div class="stamp"><img src="images/logo.png" alt="CharlieGood Burgers - hamburguesas artesanales congeladas La Serena" class="logo-stamp"></div>
+  <div class="stamp"><picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="CharlieGood Burgers - hamburguesas artesanales congeladas La Serena" class="logo-stamp"></picture></div>
 
   <div class="hero-eyebrow">Hamburguesas artesanales congeladas · La Serena y Coquimbo</div>
   <h1 id="hero-heading">
@@ -1347,7 +1369,10 @@
 
     <div class="product-card" itemscope itemtype="https://schema.org/Product">
       <div class="product-img">
-        <img src="images/pack-clasico.png" alt="Pack Clásico CharlieGood: 10 hamburguesas artesanales congeladas más 10 panes" loading="lazy" width="400" height="400">
+        <picture>
+          <source srcset="images/pack-clasico.webp" type="image/webp">
+          <img src="images/pack-clasico.jpg" alt="Pack Clásico CharlieGood: 10 hamburguesas artesanales congeladas más 10 panes" loading="lazy" width="400" height="400">
+        </picture>
       </div>
       <div class="product-body">
         <span class="product-badge" style="background:#E8B400;color:#1A1208;">El más pedido</span>
@@ -1365,7 +1390,10 @@
 
     <div class="product-card" style="border-color:rgba(232,180,0,0.35);" itemscope itemtype="https://schema.org/Product">
       <div class="product-img">
-        <img src="images/pack-doble.png" alt="Pack Doble CharlieGood: 20 hamburguesas artesanales congeladas más 10 panes para eventos" loading="lazy" width="400" height="400">
+        <picture>
+          <source srcset="images/pack-doble.webp" type="image/webp">
+          <img src="images/pack-doble.jpg" alt="Pack Doble CharlieGood: 20 hamburguesas artesanales congeladas más 10 panes para eventos" loading="lazy" width="400" height="400">
+        </picture>
       </div>
       <div class="product-body">
         <span class="product-badge" style="background:#C23B22;color:#fff;">Para el grupo</span>
@@ -1383,7 +1411,10 @@
 
     <div class="product-card" itemscope itemtype="https://schema.org/Product">
       <div class="product-img">
-        <img src="images/pack-solo-carnes.png" alt="Pack Solo Carnes CharlieGood: 10 hamburguesas artesanales congeladas sin pan" loading="lazy" width="400" height="400">
+        <picture>
+          <source srcset="images/pack-solo-carnes.webp" type="image/webp">
+          <img src="images/pack-solo-carnes.jpg" alt="Pack Solo Carnes CharlieGood: 10 hamburguesas artesanales congeladas sin pan" loading="lazy" width="400" height="400">
+        </picture>
       </div>
       <div class="product-body">
         <span class="product-badge">Solo carne</span>
@@ -1401,7 +1432,10 @@
 
     <div class="product-card" style="border:2px solid rgba(232,180,0,0.5);position:relative;" itemscope itemtype="https://schema.org/Product">
       <div class="product-img">
-        <img src="images/pack-a-tu-pinta.png" alt="Pack A Tu Pinta CharlieGood: arma tu combo de hamburguesas artesanales congeladas a tu gusto" loading="lazy" width="400" height="400">
+        <picture>
+          <source srcset="images/pack-a-tu-pinta.webp" type="image/webp">
+          <img src="images/pack-a-tu-pinta.jpg" alt="Pack A Tu Pinta CharlieGood: arma tu combo de hamburguesas artesanales congeladas a tu gusto" loading="lazy" width="400" height="400">
+        </picture>
       </div>
       <div class="product-body">
         <span class="product-badge" style="background:#E8B400;color:#1A1208;">A tu pinta</span>
@@ -1554,14 +1588,14 @@
 <!-- FOOTER -->
 <footer role="contentinfo">
   <div class="footer-copy">© 2026 CharlieGood Burgers · Desde 2019 · Hamburguesas artesanales congeladas · Delivery y eventos en La Serena y Coquimbo, Chile</div>
-  <div class="footer-logo"><img src="images/logo.png" alt="CharlieGood Burgers - hamburguesas artesanales congeladas" loading="lazy" height="80"></div>
+  <div class="footer-logo"><picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="CharlieGood Burgers - hamburguesas artesanales congeladas" loading="lazy" height="80"></picture></div>
 </footer>
 
 <!-- POPUP WHATSAPP -->
 <div id="wa-popup-overlay" class="wa-popup-overlay" role="dialog" aria-modal="true" aria-labelledby="wa-popup-title">
   <div class="wa-popup-card" id="wa-popup-card">
     <button class="wa-popup-close" id="wa-popup-close" aria-label="Cerrar popup">✕</button>
-    <img src="images/logo.png" alt="CharlieGood Burgers" class="wa-popup-logo">
+    <picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="CharlieGood Burgers" class="wa-popup-logo"></picture>
     <h2 class="wa-popup-title" id="wa-popup-title">¿Se te antojó una burger? 🍔</h2>
     <p class="wa-popup-sub">Escríbenos y te armamos tu pack al tiro</p>
     <a href="https://wa.me/56990332870?text=Hola!%20Me%20interes%C3%B3%20un%20pack%20de%20hamburguesas%20CharlieGood%20%F0%9F%94%A5"
