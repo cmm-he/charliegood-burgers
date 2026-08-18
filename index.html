@@ -37,7 +37,7 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 <!-- SEO PRIMARY -->
 <title>CharlieGood Burgers | Hamburguesas Artesanales Congeladas en La Serena y Coquimbo</title>
 <meta name="description" content="Hamburguesas artesanales congeladas en La Serena y Coquimbo. Pack Clásico, Pack Doble y más. Listas en 10 minutos. Entrega a domicilio y eventos. ¡Pide ahora por WhatsApp!">
-<meta name="keywords" content="hamburguesas artesanales La Serena, hamburguesas congeladas Coquimbo, pack hamburguesas La Serena, hamburguesas a domicilio La Serena, hamburguesas artesanales Coquimbo, catering hamburguesas eventos La Serena, hamburguesas para matrimonios Coquimbo, cocina en vivo eventos La Serena, CharlieGood Burgers">
+<meta name="keywords" content="hamburguesas artesanales La Serena, hamburguesas congeladas Coquimbo, pack hamburguesas La Serena, hamburguesas a domicilio La Serena, hamburguesas artesanales Coquimbo, catering hamburguesas eventos La Serena, hamburguesas para matrimonios Coquimbo, cocina en vivo eventos La Serena, carne congelada al por mayor La Serena, proveedor hamburguesas restaurantes Coquimbo, carne mayorista food truck, CharlieGood Burgers">
 <meta name="author" content="CharlieGood Burgers">
 <meta name="robots" content="index, follow">
 <meta name="geo.region" content="CL-CO">
@@ -136,6 +136,36 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
         },
         "price": "25000",
         "priceCurrency": "CLP"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Mayorista 30 unidades",
+          "description": "30 carnes artesanales congeladas para restaurantes, food trucks y otros locales"
+        },
+        "price": "66000",
+        "priceCurrency": "CLP"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Mayorista 50 unidades",
+          "description": "50 carnes artesanales congeladas para restaurantes, food trucks y otros locales"
+        },
+        "price": "105000",
+        "priceCurrency": "CLP"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Mayorista 100 unidades",
+          "description": "100 carnes artesanales congeladas para restaurantes, food trucks y otros locales"
+        },
+        "price": "195000",
+        "priceCurrency": "CLP"
       }
     ]
   }
@@ -215,7 +245,6 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
     align-items: center;
     padding: 0.4rem 2.5rem;
     background: rgba(26,18,8,0.95);
-    backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(232,180,0,0.12);
   }
 
@@ -768,6 +797,90 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
     line-height: 1.4;
   }
 
+  /* MAYORISTA */
+  .mayorista {
+    background: var(--charcoal);
+    padding: 4rem 2.5rem;
+  }
+
+  .mayorista-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    max-width: 960px;
+    margin: 3rem auto 0;
+  }
+
+  .mayorista-card {
+    background: var(--smoke);
+    border: 1px solid rgba(232,180,0,0.15);
+    border-radius: 12px;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+
+  .mayorista-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(232,180,0,0.4);
+  }
+
+  .mayorista-featured {
+    border: 2px solid var(--mustard);
+    background: linear-gradient(180deg, rgba(232,180,0,0.1), var(--smoke) 45%);
+  }
+
+  .mayorista-badge {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.65;
+    margin-bottom: 0.85rem;
+  }
+
+  .mayorista-badge-featured {
+    color: var(--mustard);
+    opacity: 1;
+  }
+
+  .mayorista-price {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 2.2rem;
+    color: var(--mustard);
+    line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+
+  .mayorista-unit {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--grill-red);
+    margin-bottom: 0.9rem;
+  }
+
+  .mayorista-desc {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .mayorista-cta {
+    text-align: center;
+    margin-top: 2.75rem;
+  }
+
+  .mayorista-cta p {
+    font-size: 0.92rem;
+    opacity: 0.6;
+    margin-bottom: 1rem;
+  }
+
   /* TESTIMONIOS */
   .testimonios {
     background: var(--charcoal);
@@ -1213,6 +1326,10 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
     .eventos-cg-inner { grid-template-columns: 1fr; gap: 2rem; }
     .eventos-cg-lead { max-width: 100%; }
 
+    /* MAYORISTA */
+    .mayorista { padding: 3.5rem 2rem; }
+    .mayorista-grid { grid-template-columns: 1fr; max-width: 420px; gap: 1rem; }
+
     /* TESTIMONIOS */
     .testimonios { padding: 5rem 2rem; }
     .testimonios-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1304,6 +1421,11 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
     .eventos-cg-inner { grid-template-columns: 1fr; gap: 1.75rem; }
     .eventos-cg-title { font-size: clamp(1.8rem, 8vw, 2.4rem); }
     .eventos-cg-cta { width: 100%; justify-content: center; }
+
+    /* MAYORISTA */
+    .mayorista { padding: 3rem 1.25rem; }
+    .mayorista-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .mayorista-cta .btn-secondary { width: 100%; justify-content: center; }
 
     /* TESTIMONIOS */
     .testimonios { padding: 4rem 1.25rem; }
@@ -1449,6 +1571,7 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
   <ul id="nav-menu" role="list">
     <li><a href="#productos">Productos</a></li>
     <li><a href="#eventos-cg">Eventos CG</a></li>
+    <li><a href="#mayorista">Mayorista</a></li>
     <li><a href="#como">Cómo funciona</a></li>
     <li><a href="#canales">Dónde encontrarnos</a></li>
     <li><a href="#contacto" class="nav-cta">Pedir ya</a></li>
@@ -1681,6 +1804,48 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
         <div class="eventos-cg-stat-text">La Serena, Coquimbo y alrededores</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- MAYORISTA -->
+<section class="mayorista" id="mayorista" aria-labelledby="mayorista-heading">
+  <div class="section-header">
+    <div class="section-label">Venta mayorista</div>
+    <h2 class="section-title" id="mayorista-heading">CG Mayorista: carne artesanal congelada para tu negocio</h2>
+    <p style="opacity:0.55;margin-top:0.75rem;font-size:0.95rem;max-width:620px;margin-left:auto;margin-right:auto;">Abastecemos restaurantes, food trucks, cafeterías, bares y otros locales con nuestro blend artesanal congelado, en formatos pensados para tu volumen de venta.</p>
+  </div>
+
+  <div class="mayorista-grid">
+
+    <div class="mayorista-card" itemscope itemtype="https://schema.org/Product">
+      <div class="mayorista-badge">30 unidades</div>
+      <div class="mayorista-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">$66.000</div>
+      <div class="mayorista-unit">$2.200 c/u</div>
+      <p class="mayorista-desc">Ideal para partir: food trucks y locales chicos.</p>
+      <a href="https://wa.me/56990332870?text=Hola!%20Tengo%20un%20negocio%20y%20quiero%20cotizar%20un%20pedido%20mayorista%20de%2030%20unidades%20de%20carne%20CharlieGood" class="product-btn" target="_blank" rel="noopener noreferrer">💬 Cotizar 30 unidades</a>
+    </div>
+
+    <div class="mayorista-card" itemscope itemtype="https://schema.org/Product">
+      <div class="mayorista-badge">50 unidades</div>
+      <div class="mayorista-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">$105.000</div>
+      <div class="mayorista-unit">$2.100 c/u</div>
+      <p class="mayorista-desc">Para cafeterías y bares con rotación media.</p>
+      <a href="https://wa.me/56990332870?text=Hola!%20Tengo%20un%20negocio%20y%20quiero%20cotizar%20un%20pedido%20mayorista%20de%2050%20unidades%20de%20carne%20CharlieGood" class="product-btn" target="_blank" rel="noopener noreferrer">💬 Cotizar 50 unidades</a>
+    </div>
+
+    <div class="mayorista-card mayorista-featured" itemscope itemtype="https://schema.org/Product">
+      <div class="mayorista-badge mayorista-badge-featured">100 unidades · Mejor precio</div>
+      <div class="mayorista-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">$195.000</div>
+      <div class="mayorista-unit">$1.950 c/u</div>
+      <p class="mayorista-desc">Para restaurantes y locales de alto volumen.</p>
+      <a href="https://wa.me/56990332870?text=Hola!%20Tengo%20un%20negocio%20y%20quiero%20cotizar%20un%20pedido%20mayorista%20de%20100%20unidades%20de%20carne%20CharlieGood" class="product-btn" target="_blank" rel="noopener noreferrer">💬 Cotizar 100 unidades</a>
+    </div>
+
+  </div>
+
+  <div class="mayorista-cta">
+    <p>¿Necesitas más de 100 unidades o un despacho recurrente? Armamos un plan a tu medida.</p>
+    <a href="https://wa.me/56990332870?text=Hola!%20Tengo%20un%20negocio%20y%20quiero%20conversar%20sobre%20un%20plan%20mayorista%20m%C3%A1s%20grande%20o%20recurrente" class="btn-secondary" target="_blank" rel="noopener noreferrer">Hablar de un plan a medida →</a>
   </div>
 </section>
 
