@@ -36,7 +36,7 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 <!-- SEO PRIMARY -->
 <title>CharlieGood Burgers | Hamburguesas Artesanales Congeladas en La Serena y Coquimbo</title>
 <meta name="description" content="Hamburguesas artesanales congeladas en La Serena y Coquimbo. Pack Clásico, Pack Doble y más. Listas en 10 minutos. Entrega a domicilio y eventos. ¡Pide ahora por WhatsApp!">
-<meta name="keywords" content="hamburguesas artesanales La Serena, hamburguesas congeladas Coquimbo, pack hamburguesas La Serena, hamburguesas a domicilio La Serena, hamburguesas artesanales Coquimbo, CharlieGood Burgers">
+<meta name="keywords" content="hamburguesas artesanales La Serena, hamburguesas congeladas Coquimbo, pack hamburguesas La Serena, hamburguesas a domicilio La Serena, hamburguesas artesanales Coquimbo, catering hamburguesas eventos La Serena, hamburguesas para matrimonios Coquimbo, cocina en vivo eventos La Serena, CharlieGood Burgers">
 <meta name="author" content="CharlieGood Burgers">
 <meta name="robots" content="index, follow">
 <meta name="geo.region" content="CL-CO">
@@ -154,6 +154,22 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
   "sameAs": [
     "https://instagram.com/cg.burgers"
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Catering de hamburguesas para eventos",
+  "name": "Eventos CG",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "CharlieGood Burgers",
+    "@id": "https://www.charliegood.cl/#localbusiness"
+  },
+  "areaServed": ["La Serena", "Coquimbo", "Región de Coquimbo"],
+  "description": "Servicio de cocina en vivo con hamburguesas artesanales para eventos deportivos, matrimonios, fiestas de empresa, cumpleaños y celebraciones. El precio se cotiza según la cantidad de hamburguesas y la duración del evento.",
+  "url": "https://www.charliegood.cl/#eventos-cg"
 }
 </script>
 <style>
@@ -490,9 +506,9 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.85rem;
-    max-width: 1060px;
+    max-width: 800px;
     margin: 0 auto;
     width: 100%;
   }
@@ -623,6 +639,121 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
     border: 1px solid rgba(245,237,216,0.2);
     color: var(--cream);
     opacity: 0.7;
+  }
+
+  /* EVENTOS CG — sección completa */
+  .eventos-cg {
+    background: var(--grill-red);
+    padding: 4.5rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .eventos-cg-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .eventos-cg-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--carbon);
+    margin-bottom: 1rem;
+  }
+
+  .eventos-cg-title {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    color: var(--cream);
+  }
+
+  .eventos-cg-title span { color: var(--carbon); }
+
+  .eventos-cg-lead {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    opacity: 0.92;
+    margin-bottom: 1.75rem;
+    max-width: 520px;
+  }
+
+  .eventos-cg-tipos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .eventos-tipo {
+    background: rgba(26,18,8,0.25);
+    border: 1px solid rgba(245,237,216,0.3);
+    border-radius: 6px;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  .eventos-cg-precio {
+    background: rgba(26,18,8,0.25);
+    border-left: 4px solid var(--carbon);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .eventos-cg-precio-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: var(--carbon);
+  }
+
+  .eventos-cg-precio p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    opacity: 0.92;
+  }
+
+  .eventos-cg-cta {
+    background: var(--carbon);
+    color: var(--cream) !important;
+  }
+
+  .eventos-cg-cta:hover { background: #2E2416; }
+
+  .eventos-cg-visual {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .eventos-cg-stat {
+    background: rgba(26,18,8,0.25);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .eventos-cg-stat-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+  }
+
+  .eventos-cg-stat-text {
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.4;
   }
 
   /* TESTIMONIOS */
@@ -861,6 +992,15 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
     opacity: 0.7;
   }
 
+  a.ch-detail {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s;
+  }
+
+  a.ch-detail:hover { opacity: 1; }
+
   /* CONTACTO */
   .contact {
     padding: 3.5rem 2.5rem;
@@ -1053,8 +1193,19 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 
     /* PRODUCTS — 2 columnas */
     .products { padding: 3rem 2rem; min-height: 0; }
-    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .products-grid { grid-template-columns: repeat(2, 1fr); max-width: 620px; }
+    .products-grid > :last-child {
+      grid-column: 1 / -1;
+      max-width: calc(50% - 0.425rem);
+      width: 100%;
+      margin: 0 auto;
+    }
     .product-btn { width: auto; }
+
+    /* EVENTOS CG — apilado */
+    .eventos-cg { padding: 3.5rem 2rem; }
+    .eventos-cg-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .eventos-cg-lead { max-width: 100%; }
 
     /* TESTIMONIOS */
     .testimonios { padding: 5rem 2rem; }
@@ -1141,6 +1292,12 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
     .products { padding: 2.5rem 1.25rem; min-height: 0; }
     .products-grid { grid-template-columns: 1fr; }
     .product-btn { width: 100%; }
+
+    /* EVENTOS CG */
+    .eventos-cg { padding: 3rem 1.25rem; }
+    .eventos-cg-inner { grid-template-columns: 1fr; gap: 1.75rem; }
+    .eventos-cg-title { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+    .eventos-cg-cta { width: 100%; justify-content: center; }
 
     /* TESTIMONIOS */
     .testimonios { padding: 4rem 1.25rem; }
@@ -1285,6 +1442,7 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
   </a>
   <ul id="nav-menu" role="list">
     <li><a href="#productos">Productos</a></li>
+    <li><a href="#eventos-cg">Eventos CG</a></li>
     <li><a href="#como">Cómo funciona</a></li>
     <li><a href="#canales">Dónde encontrarnos</a></li>
     <li><a href="#contacto" class="nav-cta">Pedir ya</a></li>
@@ -1451,27 +1609,51 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
       </div>
     </div>
 
-    <div class="product-card" style="border:2px solid rgba(232,180,0,0.5);position:relative;" itemscope itemtype="https://schema.org/Product">
-      <div class="product-img">
-        <picture>
-          <source srcset="images/pack-a-tu-pinta.webp" type="image/webp">
-          <img src="images/pack-a-tu-pinta.jpg" alt="Pack A Tu Pinta CharlieGood: arma tu combo de hamburguesas artesanales congeladas a tu gusto" loading="lazy" width="400" height="400">
-        </picture>
+  </div>
+</section>
+
+<!-- EVENTOS CG -->
+<section class="eventos-cg" id="eventos-cg" aria-labelledby="eventos-cg-heading">
+  <div class="eventos-cg-inner">
+    <div class="eventos-cg-copy">
+      <div class="eventos-cg-label">Nuestro servicio estrella</div>
+      <h2 class="eventos-cg-title" id="eventos-cg-heading">Eventos CG: cocinamos <span>en vivo</span> en tu evento</h2>
+      <p class="eventos-cg-lead">Llegamos con parrilla, equipo y toda la producción para preparar CharlieGood en vivo, frente a tus invitados. Tú eliges la ocasión, nosotros ponemos el show y el sabor.</p>
+
+      <div class="eventos-cg-tipos">
+        <span class="eventos-tipo">⚽ Eventos deportivos</span>
+        <span class="eventos-tipo">💍 Matrimonios</span>
+        <span class="eventos-tipo">🏢 Fiestas de empresa</span>
+        <span class="eventos-tipo">🎂 Cumpleaños</span>
+        <span class="eventos-tipo">🎉 Cualquier celebración</span>
       </div>
-      <div class="product-body">
-        <span class="product-badge" style="background:#E8B400;color:#1A1208;">A tu pinta</span>
-        <h3 class="product-name" itemprop="name">Eventos CG</h3>
-        <div class="product-price-note" itemprop="offers" itemscope itemtype="https://schema.org/Offer">PRECIO A COTIZAR</div>
-        <p class="product-desc" itemprop="description">Servicio completo de hamburguesas para tu evento en La Serena y Coquimbo. Cotiza sin compromiso.</p>
-        <div class="product-tags">
-          <span class="tag">Eventos privados</span>
-          <span class="tag">A domicilio</span>
-          <span class="tag">Cotización</span>
-        </div>
-        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20cotizar%20el%20servicio%20de%20Eventos%20CG" class="product-btn" target="_blank" rel="noopener noreferrer">💬 Cotizar por WhatsApp</a>
+
+      <div class="eventos-cg-precio">
+        <div class="eventos-cg-precio-label">¿Cómo se cotiza?</div>
+        <p>El precio depende de la <strong>cantidad de hamburguesas</strong> y la <strong>duración del evento</strong>. Cada evento es distinto, así que armamos una cotización a tu medida, sin compromiso.</p>
       </div>
+
+      <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20cotizar%20Eventos%20CG%20para%20mi%20evento.%20Tipo%20de%20evento%3A%20...%20N%C3%BAmero%20de%20invitados%3A%20...%20Duraci%C3%B3n%3A%20..." class="btn-primary eventos-cg-cta" target="_blank" rel="noopener noreferrer">💬 Cotiza tu evento por WhatsApp</a>
     </div>
 
+    <div class="eventos-cg-visual" aria-hidden="true">
+      <div class="eventos-cg-stat">
+        <span class="eventos-cg-stat-icon">🔥</span>
+        <div class="eventos-cg-stat-text">Parrilla y equipo en vivo, en el lugar de tu evento</div>
+      </div>
+      <div class="eventos-cg-stat">
+        <span class="eventos-cg-stat-icon">🍔</span>
+        <div class="eventos-cg-stat-text">Cantidad de hamburguesas a tu medida</div>
+      </div>
+      <div class="eventos-cg-stat">
+        <span class="eventos-cg-stat-icon">⏱️</span>
+        <div class="eventos-cg-stat-text">Cotización según la duración del evento</div>
+      </div>
+      <div class="eventos-cg-stat">
+        <span class="eventos-cg-stat-icon">📍</span>
+        <div class="eventos-cg-stat-text">La Serena, Coquimbo y alrededores</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1568,8 +1750,8 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
       <div class="ch-label">Eventos</div>
       <span class="ch-icon">🎪</span>
       <h3>Llevamos el show</h3>
-      <p>Organizamos el servicio de hamburguesas para tu evento: cumpleaños, juntas de empresa, celebraciones. Todo con cadena de frío y presentación incluida.</p>
-      <div class="ch-detail">→ Consulta disponibilidad</div>
+      <p>Cocinamos en vivo en tu evento: deportivos, matrimonios, fiestas de empresa, cumpleaños o cualquier celebración. Cotiza según cantidad de hamburguesas y duración.</p>
+      <a href="#eventos-cg" class="ch-detail">→ Ver Eventos CG</a>
     </div>
     <div class="channel-card domicilio">
       <div class="ch-label">Entrega a domicilio</div>
