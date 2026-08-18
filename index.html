@@ -506,9 +506,9 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.85rem;
-    max-width: 800px;
+    max-width: 1060px;
     margin: 0 auto;
     width: 100%;
   }
@@ -1193,13 +1193,7 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 
     /* PRODUCTS — 2 columnas */
     .products { padding: 3rem 2rem; min-height: 0; }
-    .products-grid { grid-template-columns: repeat(2, 1fr); max-width: 620px; }
-    .products-grid > :last-child {
-      grid-column: 1 / -1;
-      max-width: calc(50% - 0.425rem);
-      width: 100%;
-      margin: 0 auto;
-    }
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
     .product-btn { width: auto; }
 
     /* EVENTOS CG — apilado */
@@ -1606,6 +1600,27 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
           <span class="tag">Flexible</span>
         </div>
         <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20pedir%20el%20Pack%20Solo%20Carnes%20(10%20unidades)%20%E2%80%94%20%2425.000" class="product-btn" target="_blank" rel="noopener noreferrer">💬 Pedir por WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="product-card" style="border:2px solid rgba(232,180,0,0.5);position:relative;" itemscope itemtype="https://schema.org/Product">
+      <div class="product-img">
+        <picture>
+          <source srcset="images/pack-a-tu-pinta.webp" type="image/webp">
+          <img src="images/pack-a-tu-pinta.jpg" alt="Pack A Tu Pinta CharlieGood: arma tu combo de hamburguesas artesanales congeladas a tu gusto" loading="lazy" width="400" height="400">
+        </picture>
+      </div>
+      <div class="product-body">
+        <span class="product-badge" style="background:#E8B400;color:#1A1208;">A tu pinta</span>
+        <h3 class="product-name" itemprop="name">Pack A Tu Pinta</h3>
+        <div class="product-price-note" itemprop="offers" itemscope itemtype="https://schema.org/Offer">PRECIO SEGÚN TU PACK</div>
+        <p class="product-desc" itemprop="description">Arma tu combo a tu gusto: elige cuántas carnes y panes quieres. 100% congelado, listo para tu freezer.</p>
+        <div class="product-tags">
+          <span class="tag">A tu elección</span>
+          <span class="tag">Congelado</span>
+          <span class="tag">Personalizable</span>
+        </div>
+        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20armar%20mi%20Pack%20A%20Tu%20Pinta%20(elijo%20cantidad%20de%20carnes%20y%20panes)" class="product-btn" target="_blank" rel="noopener noreferrer">💬 Armar mi pack</a>
       </div>
     </div>
 
