@@ -23,6 +23,7 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 <!-- END META PIXEL -->
 
 <!-- FAVICONS -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -64,11 +65,12 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 <meta name="twitter:image" content="https://www.charliegood.cl/og-image.png">
 
 <!-- PERFORMANCE: preload recursos críticos above-the-fold -->
-<link rel="preload" href="images/logo.webp" as="image" type="image/webp">
+<link rel="preload" href="images/logo.webp" as="image" type="image/webp" fetchpriority="high">
 
 <!-- FONTS (con preconnect para velocidad) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://connect.facebook.net">
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 
 <!-- STRUCTURED DATA -->
@@ -80,7 +82,7 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
   "name": "CharlieGood Burgers",
   "description": "Hamburguesas artesanales congeladas en La Serena y Coquimbo. Blend de carnes seleccionadas, sin conservantes, listas en 10 minutos.",
   "url": "https://www.charliegood.cl",
-  "image": "https://www.charliegood.cl/images/pack-clasico.jpeg",
+  "image": "https://www.charliegood.cl/images/pack-clasico.jpg",
   "logo": "https://www.charliegood.cl/images/logo.png",
   "servesCuisine": "Hamburguesas artesanales",
   "priceRange": "$$",
@@ -1465,7 +1467,7 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
   <div class="hero-bg-text" aria-hidden="true">GOOD</div>
 
   <!-- Logo hero -->
-  <div class="stamp"><picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="CharlieGood Burgers - hamburguesas artesanales congeladas La Serena" class="logo-stamp"></picture></div>
+  <div class="stamp"><picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="CharlieGood Burgers - hamburguesas artesanales congeladas La Serena" class="logo-stamp" fetchpriority="high"></picture></div>
 
   <div class="hero-eyebrow">Hamburguesas artesanales congeladas · La Serena y Coquimbo</div>
   <h1 id="hero-heading">

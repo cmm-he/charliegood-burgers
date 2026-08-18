@@ -1,0 +1,16 @@
+# Archivos de desarrollo/originales que no se usan en el sitio en vivo.
+# Siguen en el repositorio de Git, pero no se suben al despliegue público de Vercel.
+generate_favicon.py
+
+# Fotos originales sin optimizar (reemplazadas por las versiones .jpg/.webp comprimidas)
+images/pack-clasico.png
+images/pack-doble.png
+images/pack-solo-carnes.png
+images/pack-a-tu-pinta.png
+images/pack-clasico.jpeg
+images/pack-doble.jpeg
+images/pack-solo-carnes.jpeg
+images/logo.jpeg
+
+# Gráfica promocional de Instagram, no usada en el sitio
+images/eventos-cg.jpeg
