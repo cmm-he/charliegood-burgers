@@ -83,12 +83,25 @@
   });
 }());
 
-/* META PIXEL: evento Contact al hacer clic en cualquier botón de WhatsApp */
+/* META PIXEL: evento Contact al hacer clic en cualquier boton de WhatsApp,
+   mas un evento personalizado con la categoria del boton para poder
+   segmentar campanas despues (Mayorista, Eventos, Pack normal, etc). */
 (function () {
+  function categoriaDelBoton(link) {
+    if (link.closest('.mayorista')) return 'mayorista';
+    if (link.closest('.eventos-cg')) return 'eventos';
+    if (link.closest('.product-card')) return 'producto';
+    if (link.closest('#wa-popup-overlay')) return 'popup';
+    if (link.closest('.channel-card')) return 'canales';
+    if (link.closest('.contact')) return 'contacto';
+    return 'otro';
+  }
+
   document.addEventListener('click', function (e) {
     var link = e.target.closest('a[href^="https://wa.me/"]');
     if (link && typeof fbq === 'function') {
       fbq('track', 'Contact');
+      fbq('trackCustom', 'WhatsAppClick', { categoria: categoriaDelBoton(link) });
     }
   });
 }());
