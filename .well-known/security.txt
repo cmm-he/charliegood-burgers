@@ -1,0 +1,4 @@
+Contact: https://wa.me/56990332870
+Preferred-Languages: es
+Canonical: https://charliegood.cl/.well-known/security.txt
+Expires: 2027-08-31T00:00:00.000Z
