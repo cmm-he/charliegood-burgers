@@ -83,6 +83,24 @@
   });
 }());
 
+/* FAQ accordion */
+(function () {
+  document.querySelectorAll('.faq-item').forEach(function (item) {
+    var btn = item.querySelector('.faq-question');
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.contains('is-open');
+      document.querySelectorAll('.faq-item.is-open').forEach(function (open) {
+        open.classList.remove('is-open');
+        open.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}());
+
 /* META PIXEL: evento Contact al hacer clic en cualquier boton de WhatsApp,
    mas un evento personalizado con la categoria del boton para poder
    segmentar campanas despues (Mayorista, Eventos, Pack normal, etc). */

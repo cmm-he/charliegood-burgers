@@ -190,6 +190,70 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Hacen delivery a domicilio en La Serena y Coquimbo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Hacemos entrega a domicilio en La Serena y Coquimbo. Escríbenos por WhatsApp al +56 9 9033 2870 para coordinar el pedido y el horario de entrega."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo duran congeladas las hamburguesas CharlieGood?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las hamburguesas CharlieGood duran hasta 3 meses en el freezer a -18°C manteniendo su calidad y sabor. No contienen conservantes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se preparan las hamburguesas CharlieGood?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se preparan directo desde el freezer, sin descongelar. En plancha, parrilla o sartén a fuego medio-alto, aproximadamente 10 minutos dando vuelta a la mitad. No se necesita descongelar previamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye el Pack Clásico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El Pack Clásico incluye 10 carnes artesanales congeladas más 10 panes brioche, todo por $35.000. Es el pack más pedido de CharlieGood Burgers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hacen catering de hamburguesas para eventos en La Serena?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Eventos CG es nuestro servicio de cocina en vivo para eventos: llegamos con parrilla y equipo completo a matrimonios, fiestas de empresa, cumpleaños y eventos deportivos en La Serena, Coquimbo y alrededores. El precio se cotiza según la cantidad de hamburguesas y la duración del evento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tienen venta mayorista para restaurantes y food trucks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. CG Mayorista ofrece packs de 30, 50 y 100 unidades para restaurantes, food trucks, cafeterías y bares en La Serena y Coquimbo. Precios desde $1.950 por unidad en el pack de 100."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede retirar en persona en La Serena?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Puedes retirar en nuestra sede en Cayetano Almeyda 1500, La Serena, con reserva previa. Escríbenos por WhatsApp o Instagram para agendar día y hora."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Catering de hamburguesas para eventos",
   "name": "Eventos CG",
@@ -1115,6 +1179,76 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 
   a.ch-detail:hover { opacity: 1; }
 
+  /* FAQ */
+  .faq {
+    padding: 3.5rem 2.5rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .faq-list {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    border: 1px solid rgba(232,180,0,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    background: var(--smoke);
+    border: none;
+    color: var(--cream);
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: left;
+    padding: 1.1rem 1.25rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: background 0.2s;
+  }
+
+  .faq-question:hover { background: var(--charcoal); }
+
+  .faq-question::after {
+    content: '+';
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--mustard);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  .faq-item.is-open .faq-question::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    display: none;
+    background: var(--smoke);
+    padding: 0 1.25rem 1.1rem;
+    font-size: 0.88rem;
+    opacity: 0.75;
+    line-height: 1.7;
+    border-top: 1px solid rgba(232,180,0,0.1);
+    padding-top: 0.85rem;
+  }
+
+  .faq-item.is-open .faq-answer { display: block; }
+
+  @media (max-width: 767px) {
+    .faq { padding: 3rem 1.25rem; }
+  }
+
   /* CONTACTO */
   .contact {
     padding: 3.5rem 2.5rem;
@@ -1949,6 +2083,52 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
       <div class="ch-detail" style="color:#1A1208;">→ Reserva previa obligatoria</div>
       <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20coordinar%20un%20retiro%20en%20Cayetano%20Almeyda%201500%2C%20La%20Serena" class="product-btn" style="background:#1A1208;color:#E8B400;margin-top:1.2rem;" target="_blank" rel="noopener noreferrer">💬 Reservar retiro</a>
     </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" aria-labelledby="faq-heading">
+  <div class="section-header">
+    <div class="section-label">Preguntas frecuentes</div>
+    <h2 class="section-title" id="faq-heading">Todo lo que necesitas saber</h2>
+  </div>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">¿Hacen delivery a domicilio en La Serena y Coquimbo?</button>
+      <div class="faq-answer">Sí. Hacemos entrega a domicilio en La Serena y Coquimbo. Escríbenos por WhatsApp al +56 9 9033 2870 para coordinar el pedido y el horario de entrega.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">¿Cuánto tiempo duran congeladas las hamburguesas?</button>
+      <div class="faq-answer">Hasta 3 meses en el freezer a -18°C manteniendo su calidad y sabor. No contienen conservantes.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">¿Cómo se preparan? ¿Hay que descongelarlas primero?</button>
+      <div class="faq-answer">No, van directo del freezer a la plancha o parrilla, a fuego medio-alto. Listas en 10 minutos aproximadamente dando vuelta a la mitad.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">¿Qué incluye el Pack Clásico?</button>
+      <div class="faq-answer">10 carnes artesanales congeladas más 10 panes brioche, todo por $35.000. Es el pack más pedido de CharlieGood.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">¿Hacen catering para eventos en La Serena y Coquimbo?</button>
+      <div class="faq-answer">Sí. Con Eventos CG llegamos con parrilla y equipo completo a matrimonios, fiestas de empresa, cumpleaños y eventos deportivos. El precio se cotiza según la cantidad de hamburguesas y la duración del evento.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">¿Tienen venta mayorista para restaurantes y food trucks?</button>
+      <div class="faq-answer">Sí. CG Mayorista ofrece packs de 30, 50 y 100 unidades. Precios desde $1.950 por unidad en el pack de 100. Ideal para restaurantes, food trucks, cafeterías y bares.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">¿Se puede retirar en persona en La Serena?</button>
+      <div class="faq-answer">Sí, con reserva previa. Retiro en Cayetano Almeyda 1500, La Serena. Escríbenos por WhatsApp o Instagram para agendar día y hora.</div>
+    </div>
+
   </div>
 </section>
 
