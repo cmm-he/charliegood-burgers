@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /js/
+Disallow: /.well-known/
 
+# Sitemap
 Sitemap: https://www.charliegood.cl/sitemap.xml
