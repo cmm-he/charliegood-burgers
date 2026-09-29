@@ -19,7 +19,7 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
 <!-- SECURITY HEADERS (meta fallback — HTTP headers via vercel.json toman precedencia) -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.facebook.com; script-src 'self' https://connect.facebook.net; connect-src https://www.facebook.com https://connect.facebook.net; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com; script-src 'self' https://connect.facebook.net https://www.googletagmanager.com; connect-src https://www.facebook.com https://connect.facebook.net https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
@@ -53,6 +53,10 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 <meta name="twitter:title" content="CharlieGood Burgers | Hamburguesas Artesanales Congeladas en La Serena y Coquimbo">
 <meta name="twitter:description" content="Hamburguesas artesanales congeladas en La Serena y Coquimbo. Pack Clásico, Pack Doble y más. Listas en 10 minutos. ¡Pide por WhatsApp!">
 <meta name="twitter:image" content="https://www.charliegood.cl/og-image.png">
+
+<!-- GOOGLE ANALYTICS 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-58G6NE9V0Z"></script>
+<script src="/js/analytics.js"></script>
 
 <!-- PERFORMANCE: preload recursos críticos above-the-fold -->
 <link rel="preload" href="images/logo.webp" as="image" type="image/webp" fetchpriority="high">
