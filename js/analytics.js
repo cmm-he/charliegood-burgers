@@ -1,7 +1,7 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-58G6NE9V0Z');
+gtag('config', 'G-0E958B581L');
 
 /* Conversiones: clic en WhatsApp segmentado por categoría */
 (function () {
