@@ -4,7 +4,14 @@
   var SHOW_DELAY  = 25000;
   var COUNTDOWN   = 10;
 
-  if (localStorage.getItem(STORAGE_KEY) === 'seen') return;
+  function getSeen() {
+    try { return localStorage.getItem(STORAGE_KEY) === 'seen'; } catch (e) { return false; }
+  }
+  function markSeen() {
+    try { localStorage.setItem(STORAGE_KEY, 'seen'); } catch (e) { /* sin almacenamiento */ }
+  }
+
+  if (getSeen()) return;
 
   var overlay  = document.getElementById('wa-popup-overlay');
   var closeBtn = document.getElementById('wa-popup-close');
@@ -14,7 +21,7 @@
 
   function closePopup() {
     overlay.classList.remove('is-visible');
-    localStorage.setItem(STORAGE_KEY, 'seen');
+    markSeen();
     clearInterval(interval);
     document.body.style.overflow = '';
   }
@@ -30,7 +37,11 @@
   }
 
   function showPopup() {
-    console.log('popup activado');
+    /* No se superpone al aviso de cookies: espera a que se responda */
+    if (document.documentElement.classList.contains('consent-open')) {
+      setTimeout(showPopup, 5000);
+      return;
+    }
     overlay.classList.add('is-visible');
     document.body.style.overflow = 'hidden';
     startCountdown();
@@ -98,28 +109,5 @@
         btn.setAttribute('aria-expanded', 'true');
       }
     });
-  });
-}());
-
-/* META PIXEL: evento Contact al hacer clic en cualquier boton de WhatsApp,
-   mas un evento personalizado con la categoria del boton para poder
-   segmentar campanas despues (Mayorista, Eventos, Pack normal, etc). */
-(function () {
-  function categoriaDelBoton(link) {
-    if (link.closest('.mayorista')) return 'mayorista';
-    if (link.closest('.eventos-cg')) return 'eventos';
-    if (link.closest('.product-card')) return 'producto';
-    if (link.closest('#wa-popup-overlay')) return 'popup';
-    if (link.closest('.channel-card')) return 'canales';
-    if (link.closest('.contact')) return 'contacto';
-    return 'otro';
-  }
-
-  document.addEventListener('click', function (e) {
-    var link = e.target.closest('a[href^="https://wa.me/"]');
-    if (link && typeof fbq === 'function') {
-      fbq('track', 'Contact');
-      fbq('trackCustom', 'WhatsAppClick', { categoria: categoriaDelBoton(link) });
-    }
   });
 }());

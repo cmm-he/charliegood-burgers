@@ -1,4 +1,18 @@
 {
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "charliegood-burgers.vercel.app"
+        }
+      ],
+      "destination": "https://www.charliegood.cl/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

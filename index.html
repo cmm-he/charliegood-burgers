@@ -4,12 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- META PIXEL -->
-<script defer src="/js/pixel.js"></script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
-/></noscript>
-<!-- END META PIXEL -->
+<!-- MEDICIÓN (Google Analytics + Meta Pixel): solo se cargan si el visitante acepta cookies -->
+<script defer src="/js/tracking.js"></script>
 
 <!-- FAVICONS -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -54,10 +50,6 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 <meta name="twitter:description" content="Hamburguesas artesanales congeladas en La Serena y Coquimbo. Pack Clásico, Pack Doble y más. Listas en 10 minutos. ¡Pide por WhatsApp!">
 <meta name="twitter:image" content="https://www.charliegood.cl/og-image.png">
 
-<!-- GOOGLE ANALYTICS 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0E958B581L"></script>
-<script defer src="/js/analytics.js"></script>
-
 <!-- PERFORMANCE: preload recursos críticos above-the-fold -->
 <link rel="preload" href="images/logo.webp" as="image" type="image/webp" fetchpriority="high">
 
@@ -72,15 +64,18 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 {
   "@context": "https://schema.org",
   "@type": "FoodEstablishment",
-  "@id": "https://www.charliegood.cl/#business",
+  "@id": "https://www.charliegood.cl/#localbusiness",
   "name": "CharlieGood Burgers",
-  "description": "Hamburguesas artesanales congeladas en La Serena y Coquimbo. Blend de carnes seleccionadas, sin conservantes, listas en 10 minutos.",
-  "url": "https://www.charliegood.cl",
+  "legalName": "Herradura Experience SpA",
+  "taxID": "76.182.623-9",
+  "description": "Hamburguesas artesanales congeladas en La Serena y Coquimbo. Blend de carnes seleccionadas, sin conservantes, listas en 10 minutos. Entrega a domicilio, retiro en sede con reserva y servicio para eventos.",
+  "url": "https://www.charliegood.cl/",
   "image": "https://www.charliegood.cl/images/pack-clasico.jpg",
   "logo": "https://www.charliegood.cl/images/logo.png",
   "servesCuisine": "Hamburguesas artesanales",
   "priceRange": "$$",
   "telephone": "+56990332870",
+  "foundingDate": "2019",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Cayetano Almeyda 1500",
@@ -88,18 +83,27 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
     "addressRegion": "Coquimbo",
     "addressCountry": "CL"
   },
-  "areaServed": ["La Serena", "Coquimbo", "Región de Coquimbo"],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -29.9146419,
+    "longitude": -71.2645292
+  },
+  "hasMap": "https://www.google.com/maps/place/CharlieGood/@-29.9146419,-71.2645292,17z",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "La Serena"
+    },
+    {
+      "@type": "City",
+      "name": "Coquimbo"
+    }
+  ],
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "ventas",
+    "telephone": "+56990332870",
     "availableLanguage": "Spanish"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "bestRating": "5",
-    "worstRating": "1",
-    "ratingCount": "25"
   },
   "sameAs": [
     "https://instagram.com/cg.burgers"
@@ -111,43 +115,41 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
       {
         "@type": "Product",
         "name": "Pack Clásico",
-        "description": "10 carnes artesanales + 10 panes brioche.",
+        "description": "10 hamburguesas: 10 carnes artesanales congeladas + 10 panes brioche.",
         "image": "https://www.charliegood.cl/images/pack-clasico.jpg",
-        "url": "https://www.charliegood.cl/#packs",
+        "brand": {
+          "@type": "Brand",
+          "name": "CharlieGood Burgers"
+        },
         "offers": {
           "@type": "Offer",
           "price": "35000",
           "priceCurrency": "CLP",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.charliegood.cl/#packs"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "25"
+          "url": "https://www.charliegood.cl/#productos",
+          "seller": {
+            "@id": "https://www.charliegood.cl/#localbusiness"
+          }
         }
       },
       {
         "@type": "Product",
         "name": "Pack Doble",
-        "description": "20 carnes artesanales + 10 panes brioche.",
+        "description": "10 hamburguesas dobles: 20 carnes artesanales congeladas + 10 panes brioche.",
         "image": "https://www.charliegood.cl/images/pack-doble.jpg",
-        "url": "https://www.charliegood.cl/#packs",
+        "brand": {
+          "@type": "Brand",
+          "name": "CharlieGood Burgers"
+        },
         "offers": {
           "@type": "Offer",
           "price": "60000",
           "priceCurrency": "CLP",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.charliegood.cl/#packs"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "25"
+          "url": "https://www.charliegood.cl/#productos",
+          "seller": {
+            "@id": "https://www.charliegood.cl/#localbusiness"
+          }
         }
       },
       {
@@ -155,20 +157,19 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
         "name": "Pack Solo Carnes",
         "description": "10 carnes artesanales congeladas, sin pan.",
         "image": "https://www.charliegood.cl/images/pack-solo-carnes.jpg",
-        "url": "https://www.charliegood.cl/#packs",
+        "brand": {
+          "@type": "Brand",
+          "name": "CharlieGood Burgers"
+        },
         "offers": {
           "@type": "Offer",
           "price": "25000",
           "priceCurrency": "CLP",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.charliegood.cl/#packs"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "25"
+          "url": "https://www.charliegood.cl/#productos",
+          "seller": {
+            "@id": "https://www.charliegood.cl/#localbusiness"
+          }
         }
       },
       {
@@ -176,20 +177,19 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
         "name": "Mayorista 30 unidades",
         "description": "30 carnes artesanales congeladas para restaurantes, food trucks y otros locales.",
         "image": "https://www.charliegood.cl/images/pack-clasico.jpg",
-        "url": "https://www.charliegood.cl/#mayorista",
+        "brand": {
+          "@type": "Brand",
+          "name": "CharlieGood Burgers"
+        },
         "offers": {
           "@type": "Offer",
           "price": "66000",
           "priceCurrency": "CLP",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.charliegood.cl/#mayorista"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "25"
+          "url": "https://www.charliegood.cl/#mayorista",
+          "seller": {
+            "@id": "https://www.charliegood.cl/#localbusiness"
+          }
         }
       },
       {
@@ -197,20 +197,19 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
         "name": "Mayorista 50 unidades",
         "description": "50 carnes artesanales congeladas para restaurantes, food trucks y otros locales.",
         "image": "https://www.charliegood.cl/images/pack-clasico.jpg",
-        "url": "https://www.charliegood.cl/#mayorista",
+        "brand": {
+          "@type": "Brand",
+          "name": "CharlieGood Burgers"
+        },
         "offers": {
           "@type": "Offer",
           "price": "105000",
           "priceCurrency": "CLP",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.charliegood.cl/#mayorista"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "25"
+          "url": "https://www.charliegood.cl/#mayorista",
+          "seller": {
+            "@id": "https://www.charliegood.cl/#localbusiness"
+          }
         }
       },
       {
@@ -218,58 +217,23 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
         "name": "Mayorista 100 unidades",
         "description": "100 carnes artesanales congeladas para restaurantes, food trucks y otros locales.",
         "image": "https://www.charliegood.cl/images/pack-clasico.jpg",
-        "url": "https://www.charliegood.cl/#mayorista",
+        "brand": {
+          "@type": "Brand",
+          "name": "CharlieGood Burgers"
+        },
         "offers": {
           "@type": "Offer",
           "price": "195000",
           "priceCurrency": "CLP",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.charliegood.cl/#mayorista"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "25"
+          "url": "https://www.charliegood.cl/#mayorista",
+          "seller": {
+            "@id": "https://www.charliegood.cl/#localbusiness"
+          }
         }
       }
     ]
   }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.charliegood.cl/#localbusiness",
-  "name": "CharlieGood Burgers",
-  "description": "Hamburguesas artesanales congeladas en La Serena y Coquimbo. Entrega a domicilio, retiro en sede con reserva y servicio para eventos.",
-  "url": "https://www.charliegood.cl/",
-  "image": "https://www.charliegood.cl/images/logo.png",
-  "telephone": "+56990332870",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Cayetano Almeyda 1500",
-    "addressLocality": "La Serena",
-    "addressRegion": "Coquimbo",
-    "addressCountry": "CL"
-  },
-  "areaServed": [
-    { "@type": "City", "name": "La Serena" },
-    { "@type": "City", "name": "Coquimbo" }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "bestRating": "5",
-    "worstRating": "1",
-    "ratingCount": "25"
-  },
-  "sameAs": [
-    "https://instagram.com/cg.burgers"
-  ]
 }
 </script>
 <script type="application/ld+json">
@@ -342,11 +306,7 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
   "@type": "Service",
   "serviceType": "Catering de hamburguesas para eventos",
   "name": "Eventos CG",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "CharlieGood Burgers",
-    "@id": "https://www.charliegood.cl/#localbusiness"
-  },
+  "provider": { "@id": "https://www.charliegood.cl/#localbusiness" },
   "areaServed": ["La Serena", "Coquimbo", "Región de Coquimbo"],
   "description": "Servicio de cocina en vivo con hamburguesas artesanales para eventos deportivos, matrimonios, fiestas de empresa, cumpleaños y celebraciones. El precio se cotiza según la cantidad de hamburguesas y la duración del evento.",
   "url": "https://www.charliegood.cl/#eventos-cg"
@@ -415,6 +375,7 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
   nav ul a:hover { opacity: 1; color: var(--mustard); }
 
   .nav-cta {
+    white-space: nowrap;
     background: var(--mustard);
     color: var(--carbon) !important;
     padding: 0.45rem 1.1rem;
@@ -625,9 +586,11 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
     margin-bottom: 1rem;
   }
 
+  .about > * { min-width: 0; }
+
   .stat-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
   }
 
@@ -1617,7 +1580,10 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
     .stamp { display: none; }
 
     /* ABOUT */
-    .about { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 1.25rem; }
+    .about { grid-template-columns: minmax(0, 1fr); gap: 2rem; padding: 4rem 1.25rem; }
+    .stat-grid { gap: 1rem; }
+    .stat-card { padding: 1.1rem; }
+    .stat-number { font-size: 2rem; }
 
     /* PRODUCTS */
     .products { padding: 2.5rem 1.25rem; min-height: 0; }
@@ -1764,6 +1730,41 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
     .wa-popup-title { font-size: 1.5rem; }
     .wa-popup-logo { height: 64px; }
   }
+
+  /* PIE LEGAL */
+  .footer-legal { font-size: 0.8rem; opacity: 0.6; margin-top: 0.5rem; line-height: 1.6; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin-top: 0.6rem; }
+  .footer-links a, .footer-links button {
+    color: var(--cream); opacity: 0.75; font: inherit; font-size: 0.85rem;
+    background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px;
+  }
+  .footer-links a:hover, .footer-links button:hover { opacity: 1; color: var(--mustard); }
+
+  /* AVISO DE COOKIES */
+  .cookie-banner {
+    position: fixed; left: 1rem; right: 1rem; bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    z-index: 10000; max-width: 640px; margin: 0 auto;
+    background: var(--charcoal); color: var(--cream);
+    border: 1px solid rgba(232,180,0,0.35); border-radius: 12px;
+    padding: 1.25rem 1.25rem 1rem; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  }
+  .cookie-banner h2 { font-size: 1rem; font-weight: 800; margin-bottom: 0.4rem; }
+  .cookie-banner p { font-size: 0.9rem; line-height: 1.55; opacity: 0.85; }
+  .cookie-banner p a { color: var(--mustard); }
+  .cookie-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+  .cookie-actions button {
+    flex: 1 1 10rem; min-height: 44px; border-radius: 6px; cursor: pointer;
+    font: inherit; font-weight: 800; font-size: 0.9rem; letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .cookie-accept { background: var(--mustard); color: var(--carbon); border: 2px solid var(--mustard); }
+  .cookie-reject { background: transparent; color: var(--cream); border: 2px solid rgba(245,237,216,0.6); }
+
+  /* MOVIMIENTO REDUCIDO */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .ticker-inner { animation: none; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+  }
 </style>
 </head>
 <body>
@@ -1908,20 +1909,20 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
       <div class="product-img">
         <picture>
           <source srcset="images/pack-doble.webp" type="image/webp">
-          <img src="images/pack-doble.jpg" alt="Pack Doble CharlieGood: 20 hamburguesas artesanales congeladas más 10 panes para eventos" loading="lazy" width="400" height="400">
+          <img src="images/pack-doble.jpg" alt="Pack Doble CharlieGood: 10 hamburguesas dobles, con 20 carnes artesanales congeladas y 10 panes brioche" loading="lazy" width="400" height="400">
         </picture>
       </div>
       <div class="product-body">
         <span class="product-badge" style="background:#C23B22;color:#fff;">Para el grupo</span>
         <h3 class="product-name">Pack Doble</h3>
         <div class="product-price">$60.000</div>
-        <p class="product-desc">20 carnes artesanales + 10 panes brioche. Para cuando llegan todos y la junta se pone buena.</p>
+        <p class="product-desc">10 hamburguesas dobles: 2 carnes por pan (20 carnes + 10 panes brioche). Para cuando el hambre viene en serio.</p>
         <div class="product-tags">
+          <span class="tag">Doble carne</span>
           <span class="tag">20 carnes</span>
           <span class="tag">10 panes</span>
-          <span class="tag">Para eventos</span>
         </div>
-        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20pedir%20el%20Pack%20Doble%20(20%20carnes%20%2B%2010%20panes)%20%E2%80%94%20%2460.000" class="product-btn" target="_blank" rel="noopener noreferrer">💬 Pedir por WhatsApp</a>
+        <a href="https://wa.me/56990332870?text=Hola!%20Quiero%20pedir%20el%20Pack%20Doble%20(10%20hamburguesas%20dobles%3A%2020%20carnes%20%2B%2010%20panes)%20%E2%80%94%20%2460.000" class="product-btn" target="_blank" rel="noopener noreferrer">💬 Pedir por WhatsApp</a>
       </div>
     </div>
 
@@ -2244,7 +2245,15 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
 
 <!-- FOOTER -->
 <footer role="contentinfo">
-  <div class="footer-copy">© 2026 CharlieGood Burgers · Desde 2019 · Hamburguesas artesanales congeladas · Delivery y eventos en La Serena y Coquimbo, Chile</div>
+  <div>
+    <div class="footer-copy">© 2026 CharlieGood Burgers · Desde 2019 · Hamburguesas artesanales congeladas · Delivery y eventos en La Serena y Coquimbo, Chile</div>
+    <div class="footer-legal">Herradura Experience SpA · RUT 76.182.623-9 · Cayetano Almeyda 1500, La Serena</div>
+    <div class="footer-links">
+      <a href="/privacidad">Política de privacidad</a>
+      <a href="/terminos">Condiciones de venta</a>
+      <button type="button" data-cookie-settings>Preferencias de cookies</button>
+    </div>
+  </div>
   <div class="footer-logo"><picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="CharlieGood Burgers - hamburguesas artesanales congeladas" loading="lazy" height="80"></picture></div>
 </footer>
 
@@ -2263,6 +2272,16 @@ src="https://www.facebook.com/tr?id=3209132552615848&ev=PageView&noscript=1"
       💬 Escribir por WhatsApp
     </a>
     <p class="wa-popup-countdown">Cerrando en <span id="wa-popup-timer">10</span> segundos...</p>
+  </div>
+</div>
+
+<!-- AVISO DE COOKIES -->
+<div id="cookie-banner" class="cookie-banner" role="region" aria-labelledby="cookie-title" hidden>
+  <h2 id="cookie-title">¿Nos dejas medir tu visita?</h2>
+  <p>Usamos cookies de Google Analytics y Meta para saber cómo se usa el sitio y mejorar nuestros anuncios. Solo se activan si aceptas. Más detalles en nuestra <a href="/privacidad">política de privacidad</a>.</p>
+  <div class="cookie-actions">
+    <button type="button" class="cookie-reject" data-cookie-choice="denied">Rechazar</button>
+    <button type="button" class="cookie-accept" data-cookie-choice="granted">Aceptar</button>
   </div>
 </div>
 
